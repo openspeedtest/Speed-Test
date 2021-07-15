@@ -16,6 +16,8 @@ For testing 10GbE or more, you will need to use the latest hardware. I used M1 M
 
 You have two options here. If you need a custom deployment, use our source code along with a web server of your choice. I prefer Nginx, and you can find my [Nginx Configuration](https://github.com/openspeedtest/Nginx-Configuration) here. Or you can use our docker image. You can deploy it on your LAN/WAN without an active internet connection.
 
+**This is docker implementation using  nginxinc/nginx-unprivileged:stable-alpine. Around 10 Mb in size, uses significantly fewer resources.**
+
 **Docker install instructions:**
 
 Install Docker and run the following command!
