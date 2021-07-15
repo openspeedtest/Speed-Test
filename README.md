@@ -11,3 +11,7 @@ For testing 10GbE or more, you will need to use the latest hardware. I used M1 M
 
   
 [![10Gbps Network Speed Test!](https://openspeedtest.com/images/Docker_youtube_icon.jpg)](https://www.youtube.com/embed/wpXMxh3FfXE "10Gbps Network Speed Test!") 
+
+## Self-hosted (On-Premise) / (Docker Image/Source Code)
+
+You have two options here. If you need a custom deployment, use our source code along with a web server of your choice. I prefer Nginx, and you can fund my [Nginx Configuration](https://github.com/openspeedtest/Nginx-Configuration) here. Or you can use our docker image. You can deploy it on your LAN/WAN without an active internet connection.
