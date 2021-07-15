@@ -1,0 +1,390 @@
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: auto;
+    src: url('./fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Roboto'), local('Roboto-Regular'),
+         url('./fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/roboto-v20-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  /* roboto-500 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-display: auto;
+    src: url('./fonts/roboto-v20-latin-500.eot'); /* IE9 Compat Modes */
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+         url('./fonts/roboto-v20-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/roboto-v20-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/roboto-v20-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/roboto-v20-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/roboto-v20-latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  body {
+    margin: 0px;
+    padding: 0px;
+    display: block; 
+    overflow: hidden;
+  }
+   
+  .ConnectError{
+  display: none;
+  }
+   
+  
+  .openSpeedtestApp{
+      height: 100vh;
+       width: 100vw;
+       display: none;
+  
+  
+   }
+  .main-Guagebg{
+      fill: none;
+      stroke: rgb(231, 231, 232);
+      stroke-linecap: round;
+      stroke-linejoin:round;
+      stroke-width: 22px;
+      stroke-dasharray: 681;
+      }
+   .main-GuageBlue{
+       fill: none;
+      stroke: url(#gradient);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 22px;
+      stroke-dasharray: 681;
+      stroke-opacity: 0;
+   }
+  .main-GuageWhite{
+      fill: none;
+      stroke: rgb(255, 255, 255);
+      stroke-linecap: round;
+      stroke-linejoin:round;
+      stroke-width: 15px;
+      stroke-dasharray: 0, 681;
+      stroke-dashoffset: 1;
+      stroke-opacity: 0;
+  }
+  .oDo-Meter{
+      font-size: 16.633283615112305px;
+      fill: gray;
+      font-family: Roboto-Medium, Roboto;
+      font-weight: 500;
+  }
+  .oDoLive-Speed{
+      font-size: 28px;
+      fill: #201e1e;
+      font-family: Roboto-Medium, Roboto;
+      font-weight: 500;
+      text-anchor:middle;
+  }
+   
+  .oDoLive-Status{
+      font-size: 10px;
+      fill: #d2d1d2;
+      font-family: Roboto-Medium, Roboto;
+      font-weight: 500;
+      text-anchor:middle;
+  }
+  .uiBg{
+      fill: #d2d1d2;
+  }
+  .progressbg{
+  
+  stroke: rgb(231, 231, 232);
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 0;
+  }
+  .Cards{
+  fill: #f2f2f2;	
+  }
+  .Symbol{
+  fill : url(#gradient);
+  }
+  .rtext{
+      font-size: 12px;
+      fill: #333;
+      font-family: Roboto-Medium, Roboto;
+      font-weight: 500;
+  }
+  .rtextnum{
+      font-size: 23px;
+      fill: #201e1e;
+      font-family: Roboto-Medium, Roboto;
+      font-weight: 500;
+      text-anchor:middle;
+  }
+  .rtextmbms{
+      font-size: 12px;
+      fill: #5f5f5f;
+      font-family: Roboto-Medium, Roboto;
+      font-weight: 500;
+      text-anchor:middle;
+  }
+  .jitter-Mob{
+      font-size: 9px;
+      fill: #5f5f5f;
+      font-family: Roboto-Medium, Roboto;
+      font-weight: 500;
+      text-anchor:middle;
+  }
+  .startButton{
+  fill: url(#RadialGradient1);
+ -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  cursor:pointer;
+  pointer-events:visible;
+}
+ .buttonTxt{
+    font-size: 40px;
+    fill: #ffffff;
+    font-family: Roboto-Medium, Roboto;
+    font-weight: 500;
+    text-anchor:middle;   
+ }
+ 
+  .intro-Progress{
+  stroke: #56c4fb;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 0;
+   
+   
+  }
+  .progressElmstart{
+  stroke: #56c4fb;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 0;
+  display: block;
+  }
+  .Startsettings{
+  fill: url(#RadialGradient1);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  cursor:pointer;
+  pointer-events:visible; 
+  opacity: 0.10;
+  transition: opacity 1s ease-in-out;
+  }
+  .Startsettings:hover{
+      opacity: 1;
+  }
+  
+  .progressbg{
+  
+  stroke: rgb(231, 231, 232);
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 0;
+  }
+  .deskStart{
+      fill: none;
+      stroke: rgb(231, 231, 232);
+      stroke-linecap: round;
+      stroke-linejoin:round;
+      stroke-width: 22px;
+      stroke-dasharray: 681;
+      stroke: url(#gradient);
+       
+  
+  }
+  #UI-Desk{
+  display: none;
+  }
+  #UI-Mob{
+  display: none;
+  }
+  .oDoTop-Speed{
+      font-size: 16.96px;
+      fill: gray;
+      font-family: Roboto-Medium, Roboto;
+      font-weight: 500;
+      text-anchor: end;
+       
+  }
+  #upSymbolDesk{
+  fill: #14b0fe;
+  display: none;
+  }
+  #downSymbolDesk{
+  fill: #14b0fe;
+  display: none;
+  }
+  #upSymbolMob{
+  fill: #14b0fe;
+  display: none;
+  } 
+  #downSymbolMob{
+  fill: #14b0fe;
+  display: none;
+  }
+   
+  #ipMob{
+   
+      font-size: 15px;
+      fill: #201e1e;
+      font-family: Roboto-Medium, Roboto;
+      font-weight: 500;
+      text-anchor:middle;
+      display: none;
+  }
+  #ipDesk{
+  
+      font-size: 15px;
+      fill: #201e1e;
+      font-family: Roboto-Medium, Roboto;
+      font-weight: 500;
+      text-anchor:middle;
+      display: none;	
+  }
+  
+  
+   
+  
+  .spinner {
+      position: fixed;
+      z-index: 999;
+      margin-top: 48vh;
+      margin-left: 49.5vw;
+  }
+  
+  .spinner > div {
+    width: 20px;
+    height: 20px;
+    background-color: #2196F3;
+  
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+  
+  .spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  
+  .spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 40% { 
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+    }
+  }
+  
+  
+   
+   .Mobile,.Desktop{visibility: hidden;}
+   .Mobile,.Desktop{width: 100%; height: 100%;}
+  
+  
+  
+  @media only screen
+  and (min-width : 321px) {
+              .Mobile { visibility: hidden; }
+              .Desktop { visibility: visible; }
+  }
+   
+  
+  @media only screen
+  and (max-width : 320px) {
+              .Mobile { visibility: visible; }
+              .Desktop { visibility: hidden; }
+               
+  }
+   
+  
+  @media only screen
+  and (min-device-width : 600px)
+  and (max-device-width : 960px)
+  and (orientation : portrait) {
+              .Mobile { visibility: visible; }
+              .Desktop { visibility: hidden; }
+  
+               
+  }
+   
+   
+  
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+  
+              .Mobile { visibility: hidden; }
+              .Desktop { visibility: visible; }
+  
+               
+  }
+   
+  
+  @media only screen
+  and (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : portrait) {
+              .Mobile { visibility: visible; }
+              .Desktop { visibility: hidden; }
+  }
+  
+  @media only screen
+  and (min-width : 1224px) {
+              .Mobile { visibility: hidden; }
+              .Desktop { visibility: visible; }
+  }
+  
+  @media only screen
+  and (min-width : 1824px) {
+              .Mobile { visibility: hidden; }
+              .Desktop { visibility: visible; }
+  }
+  
+  
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 568px)
+  and (orientation : landscape) {
+              .Mobile { visibility: hidden; }
+              .Desktop { visibility: visible; }
+  }
+   
+  
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 568px)
+  and (orientation : portrait) {
+              .Mobile { visibility: visible; }
+              .Desktop { visibility: hidden; }
+  }
