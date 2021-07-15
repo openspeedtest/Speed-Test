@@ -15,3 +15,17 @@ For testing 10GbE or more, you will need to use the latest hardware. I used M1 M
 ## Self-hosted (On-Premise) / (Docker Image/Source Code)
 
 You have two options here. If you need a custom deployment, use our source code along with a web server of your choice. I prefer Nginx, and you can fund my [Nginx Configuration](https://github.com/openspeedtest/Nginx-Configuration) here. Or you can use our docker image. You can deploy it on your LAN/WAN without an active internet connection.
+
+**Docker install instructions:**
+
+Install Docker and run the following command!
+
+1.  **docker run --restart=unless-stopped --name openspeedtest -d -p 3000:3000 -p 3001:3001 openspeedtest/latest**
+    
+2.  Now open your browser and direct it to:
+    
+
+A: For **HTTP** use:  [http://YOUR-SERVER-IP:3000](http://your-nas-ip:3000/)
+
+B: For **HTTPS** use:  [https://YOUR-SERVER-IP:3001](https://your-nas-ip:3001/)
+
