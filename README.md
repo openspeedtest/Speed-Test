@@ -35,3 +35,11 @@ The same Story goes for Windows NGINX. Nginx uses only one worker even if you sp
 
 
 
+## Speedtest for Home/Office LAN! [Easy to use Standalone Application for Desktop]
+
+**An application for launching a quick speed test server. Without using any commands!** First, test your local network speed before pointing fingers towards your ISP for a **slow and sluggish internet experience.** Introducing **Network Speed Test Server for Windows, Mac & Linux!**. This application is good enough for testing speeds up to 15Gbps.  [Download Now!](https://go.openspeedtest.com/Server). 
+[![Download OpenSpeedTest-Server V2.1](https://openspeedtest.com/images/OSTV2-SS.png)](https://go.openspeedtest.com/Server "Download OpenSpeedTest-Server V2.1")
+
+## 1Gbps Network Speed Test using OpenSpeedTest | Brave VS Chrome VS Firefox VS Internet Explorer VS Opera VS Chrome Dev VS Microsoft Edge VS Canary
+[![Brave VS Chrome VS Firefox VS Internet Explorer VS Opera VS Chrome Dev VS Microsoft Edge VS Canary for 1Gbps Network Speed.
+!](https://openspeedtest.com/images/Browser-tested.jpg)](https://www.youtube.com/embed/K8KteNNe_p4 "Brave VS Chrome VS Firefox VS Internet Explorer VS Opera VS Chrome Dev VS Microsoft Edge VS Canary for 1Gbps Network Speed.")
