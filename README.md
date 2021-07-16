@@ -39,7 +39,31 @@ The same Story goes for Windows NGINX. Nginx uses only one worker even if you sp
 
 ## Speedtest for Home/Office LAN! [Easy to use Standalone Application for Desktop]
 
-**An application for launching a quick speed test server. Without using any commands!** First, test your local network speed before pointing fingers towards your ISP for a **slow and sluggish internet experience.** Introducing **Network Speed Test Server for Windows, Mac & Linux!**. This application is good enough for testing speeds up to 15Gbps.  [Download Now!](https://go.openspeedtest.com/Server). 
+**An application for launching a quick speed test server. Without using any commands!** 
+First, test your local network speed before pointing fingers towards your ISP for a **slow and sluggish internet experience**. Introducing **Network Speed Test Server for Windows, Mac & Linux!**. For professionals, docker image and source code are available. This application is good enough for testing speeds up to 15Gbps.  [Download Now!](https://go.openspeedtest.com/Server). 
+
+**How is this useful for me?**  
+
+You can run OpenSpeedTest Server in your Home/Office/Cloud. So that you or employees who work from home can run a speed test to your office and make sure they can run everything smoothly.
+
+  
+**Choosing between ISP1 & ISP2.**  
+
+Sometimes your ISP2 is Faster than ISP1 when you test your speed on popular speed test sites. But when you connect to your Home/Office/Cloud, that slower connection may perform better. The only way to find out is to run a speed test against your infrastructure.
+
+  
+**Troubleshooting network issues.**  
+
+It is common even when your Internet connection is working fine, but some of the devices in your network may experience trouble getting decent connectivity to the internet. The issue might be the wrong VLAN ID or Faulty Switch. If you run a Local network speed test, you can find and fix these issues easily.
+
+  
+**Before you add a repeater.**  
+
+Most repeaters will reduce your network speed by 50%, so if you put it far away, it will perform worst, and if you put it too close, you will not get enough coverage if you run a Local Network speed test. Depending on the application requirements, you can decide exactly where you need to put your repeater.
+
+  
+**No client-side software or plugin is required. You can run a network speed test from any device with a web browser that is IE10 or new.**
+
 [![Download OpenSpeedTest-Server V2.1](https://openspeedtest.com/images/OSTV2-SS.png)](https://go.openspeedtest.com/Server "Download OpenSpeedTest-Server V2.1")
 
 ## 1Gbps Network Speed Test using OpenSpeedTest | Brave VS Chrome VS Firefox VS Internet Explorer VS Opera VS Chrome Dev VS Microsoft Edge VS Canary
