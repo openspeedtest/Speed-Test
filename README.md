@@ -71,7 +71,8 @@ Most repeaters will reduce your network speed by 50%, so if you put it far away,
 !](https://openspeedtest.com/images/Browser-tested.jpg)](https://www.youtube.com/embed/K8KteNNe_p4 "Brave VS Chrome VS Firefox VS Internet Explorer VS Opera VS Chrome Dev VS Microsoft Edge VS Canary for 1Gbps Network Speed.")
 
 ©Copyright 2013-2022 by OpenSpeedTest.com. All Rights Reserved.
-Share — copy and redistribute the material in any medium or format for any purpose, even commercially. Read full license terms @ http://go.openspeedtest.com/License
+Share — copy and redistribute the material in any medium or format for any purpose, even commercially.
+Read full license terms @ http://go.openspeedtest.com/License
 
 Like this Project? Please **Donate NOW & Keep us Alive** -> https://go.openspeedtest.com/Donate
 
