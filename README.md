@@ -31,6 +31,16 @@ A: For **HTTP** use:  [http://YOUR-SERVER-IP:3000](http://your-nas-ip:3000/)
 
 B: For **HTTPS** use:  [https://YOUR-SERVER-IP:3001](https://your-nas-ip:3001/)
 
+**How to use your own SSL Certificate?** 
+ 
+You can mount a folder with your own SSL certificate to this docker container by adding the following line to the above command. 
+
+**-v** */PATH-TO-YOUR-OWN-SSL-CERTIFICATE***:/etc/ssl/**
+
+I am adding a folder with **nginx.crt** and **nginx.key** from my desktop by using the following command. 
+
+**docker run -v /Users/vishnu/Desktop/docker/:/etc/ssl/ --restart=unless-stopped --name openspeedtest -d -p 3000:3000 -p 3001:3001 openspeedtest/latest**
+
 Docker images run better on Linux Platforms, including your NAS. But if you install docker on macOS or Windows, you may see poor performance. I asked this on Docker forums, and they told me macOS and Windows support is for Development purposes only. For Production, you need to use any Linux Platform.
 
 The same Story goes for Windows NGINX. Nginx uses only one worker even if you specify n number of worker processes. They will show in Task Manager, but the system will only use one. I  got this information directly from the Nginx website.
