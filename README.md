@@ -71,6 +71,10 @@ It is common even when your Internet connection is working fine, but some of the
 
 Most repeaters will reduce your network speed by 50%, so if you put it far away, it will perform worst, and if you put it too close, you will not get enough coverage if you run a Local Network speed test. Depending on the application requirements, you can decide exactly where you need to put your repeater.
 
+**Browsing experience.**
+
+Many useful browser extensions are out there that we all know and love. But some of them are really slowing you down for **few seconds per page you visit**. You may see good performance when you test your network performance via File Transfer or Command-line utilities, but you may experience poor performance when browsing the internet. This is due to a bad browser configuration that including unwanted extensions installed. From my experience, only keep the one you are going to use every single day. Extension that you may use once in a while should be removed or disabled for maximum performance. If you see poor performance, try OpenSpeedTest from Private Window or Incognito Window. **This tool can be used to check the browser performance and impact of Extensions on your browsing experience.**
+
   
 **No client-side software or plugin is required. You can run a network speed test from any device with a web browser that is IE10 or new.**
 
