@@ -77,8 +77,12 @@ Many useful browser extensions are out there that we all know and love. But some
 
   
 **No client-side software or plugin is required. You can run a network speed test from any device with a web browser that is IE10 or new.**
+## [Download -> OpenSpeedTest-Server Version 2.1 for Free!](https://go.openspeedtest.com/Server)
+<a target="_blank" href="https://go.openspeedtest.com/snapcraft"><img alt="Get it from the Snap Store" width="200" height="60" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg"/></a>  <a target="_blank" href='https://go.openspeedtest.com/MicrosoftStore'><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='English badge'  width="200" height="60" style=''/></a>  <a target="_blank" href="https://go.openspeedtest.com/MacAppStore"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-mac-app-store/black/en-us?size=200x63&amp;releaseDate=1628035200&h=0de6aaedcd22ceddb13b33111eefa079" alt="Download on the Mac App Store" width="200" height="60" style=""></a> 
 
 [![Download OpenSpeedTest-Server V2.1](https://openspeedtest.com/images/OSTV2-SS.png)](https://go.openspeedtest.com/Server "Download OpenSpeedTest-Server V2.1")
+
+
 
 ## 1Gbps Network Speed Test using OpenSpeedTest | Brave VS Chrome VS Firefox VS Internet Explorer VS Opera VS Chrome Dev VS Microsoft Edge VS Canary
 [![Brave VS Chrome VS Firefox VS Internet Explorer VS Opera VS Chrome Dev VS Microsoft Edge VS Canary for 1Gbps Network Speed.
