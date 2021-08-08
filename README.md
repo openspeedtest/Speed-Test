@@ -50,7 +50,7 @@ The same Story goes for Windows NGINX. Nginx uses only one worker even if you sp
 ## Speedtest for Home/Office LAN! [Easy to use Standalone Application for Desktop]
 
 **An application for launching a quick speed test server. Without using any commands!** 
-First, test your local network speed before pointing fingers towards your ISP for a **slow and sluggish internet experience**. Introducing **Network Speed Test Server for Windows, Mac & Linux!**. For professionals, docker image and source code are available. This application is good enough for testing speeds up to 15Gbps.  [Download Now!](https://go.openspeedtest.com/Server). 
+First, test your local network speed before pointing fingers towards your ISP for a **slow and sluggish internet experience**. Introducing **Network Speed Test Server for Windows, Mac & Linux!**. For large-scale deployments, docker image and source code are available. This application is good enough for testing speeds up to 15 to 20 Gbps.  [Download Now!](https://go.openspeedtest.com/Server). 
 
 **How is this useful for me?**  
 
