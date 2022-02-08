@@ -21,7 +21,7 @@ http://192.168.1.5?stress=5000
 
 2. Start a Speedtest Automatically.
 
-Start a speed test automatically 
+Starts a speed test automatically 
 ````
 http://192.168.1.5?run
 ````
@@ -44,7 +44,7 @@ Edit Index.html
 var saveData = true;
 var saveDataURL = "//yourDatabase.Server.com:4500/save?data=";
 ````
-4. Add multiple servers 
+4. Add multiple servers (Choose one with least latency automatically)
 
 Edit Index.html
 ````
@@ -59,7 +59,7 @@ Edit Index.html
 ````
 http://192.168.1.5?clean
 ````
-Overhead Compensation factor, This is browser based test, Many Unknowns. Currently 4%. That is within the margin of error. you cam pass "clean" URL pramater and reset it to Zero or set anything under 5%, for that pass 1 for 1% , 2 = 2%, 3 =3% & 4=4% , "clean" will not accept values above 5, so Compensation is limited to maximum 4%
+Overhead Compensation factor, This is browser based test, Many Unknowns. Currently 4%. That is within the margin of error. you cam pass "clean" as a URL pramater and reset it to Zero or set anything under 5%, for that pass 1 for 1% , 2 = 2%, 3 =3% & 4=4% , "clean" will not accept values above 5, so Compensation is limited to maximum 4%
 
 Take a look at index.html, you can set a custom ping sample size, threads, upload data size, initial dlDuration etc. 
 
