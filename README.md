@@ -4,6 +4,65 @@ Hi! I'm [Vishnu](https://vishnu.pro) the one who developed **[OpenSpeedTestâ„¢ï¸
 
 Tested up to 10Gbps on real NIC and up to 30Gbps on Virtual NIC. You can run a speed test from any device with a Web Browser that is IE10 or new. That means you can test your network speed from your Smart TV, Console, etc. No additional plugins or software required.
 
+### New features:
+
+1. Stress Test.
+
+To enable stress pass 'stress' keyword as a URL parameter.
+
+````
+http://192.168.1.5?stress=low
+````
+After stress keyword you should give a value, number of seconds or preset values "low", "medium" ,"high" ,"veryhigh" ,"extreem" will run a speed test for 300,600,900,1800,3600 seconds respectively. or you can specofy eg:5000 directly without any preset keywords. 
+
+````
+http://192.168.1.5?stress=5000
+````
+
+2. Start a Speedtest Automatically.
+
+Start a speed test automatically 
+````
+http://192.168.1.5?run
+````
+Start a speed test automatically after few seconds
+````
+http://192.168.1.5?run=10
+````
+
+You can pass multiple keywords 
+
+````
+http://192.168.1.5?run&stress=300
+````
+This will start a speed test immediately and run for 300 seconds in each direction. That is 300 seconds for download and 300 seconds for upload. 
+
+3. Save results to a Database
+
+Edit Index.html
+```` 
+var saveData = true;
+var saveDataURL = "//yourDatabase.Server.com:4500/save?data=";
+````
+4. Add multiple servers 
+
+Edit Index.html
+````
+ var openSpeedTestServerList = [
+    {"ServerName":"Home-Earth", "Download":"/downloading", "Upload":"/upload", "ServerIcon":"DefaultIcon"},
+    {"ServerName":"Home-Mars", "Download":"/downloading", "Upload":"/upload", "ServerIcon":"DefaultIcon"},
+    {"ServerName":"Home-Moon", "Download":"/downloading", "Upload":"/upload", "ServerIcon":"DefaultIcon"}
+    ];
+````
+5. Disable or change Overhead Compensation factor.
+
+````
+http://192.168.1.5?clean
+````
+Overhead Compensation factor, This is browser based test, Many Unknowns. Currently 4%. That is within the margin of error. you cam pass "clean" URL pramater and reset it to Zero or set anything under 5%, for that pass 1 for 1% , 2 = 2%, 3 =3% & 4=4% , "clean" will not accept values above 5, so Compensation is limited to maximum 4%
+
+Take a look at index.html, you can set a custom ping sample size, threads, upload data size, initial dlDuration etc. 
+
 **TLDR: If you need to test 10Gbps or more. You may need to use the latest hardware. Use Safari or Chrome in Private Window or Incognito Window.**
 
 
@@ -16,7 +75,7 @@ For testing 10GbE or more, you will need to use the latest hardware. I used M1 M
 
 You have two options here. If you need a custom deployment, use our source code along with a web server of your choice. I prefer Nginx, and you can find my [Nginx Configuration](https://github.com/openspeedtest/Nginx-Configuration) here. Or you can use our docker image. You can deploy it on your LAN/WAN without an active internet connection.
 
-**This is docker implementation using  nginxinc/nginx-unprivileged:stable-alpine. Around 10 Mb in size, uses significantly fewer resources.**
+**This is docker implementation using  nginxinc/nginx-unprivileged:stable-alpine. uses significantly fewer resources.**
 
 ### Docker install instructions:
 
