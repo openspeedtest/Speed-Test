@@ -24,65 +24,70 @@
 <body>
   <script type="text/javascript">
 
-    /*
-         ©CopyRight 2013-2022 by OpenSpeedTest.COM. All Rights Reserved. 
-         Official Website : https://OpenSpeedTest.COM | Email: support@openspeedtest.com
-         Developed by : Vishnu | https://Vishnu.Pro | Email : me@vishnu.pro 
-                
-         HTML5 Network Performance Estimation Tool -> [JS,XHR,SVG,HTML,CSS]
-         Started in 2011 and Moved to OpenSpeedTest.COM Dedicated Project/Domain Name in 2013.
-         SpeedTest Script -> 2013 -> Beta | 2015 -> V1 | 2019 ->V2 | 2020 V2.1 | 2021 V2.12.
-    
-         Self-Hosted OpenSpeedTest-Server (iFrame/Nginx) -> 2014.
-         OpenSpeedTest-Server (On-premises)
-         [Docker] -> V1 2019 | V2 2020 | V2.1 2021
-         [Node.js/Electron JS] -> 2020 V1 | 2021 V2 & V2.1
-         Download -> https://go.openspeedtest.com/Server
-    
-         Like this Project? Please Donate NOW & Keep us Alive -> https://go.openspeedtest.com/Donate
-    
-         Share — copy and redistribute the material in any medium or format for any purpose, even commercially.
-         Read full license terms @ http://go.openspeedtest.com/License
-         If you have any Questions, ideas or Comments Please Send it via -> https://go.openspeedtest.com/SendMessage
-    
-    */
+/*
+     ©CopyRight 2013-2022 by OpenSpeedTest.COM. All Rights Reserved. 
+     Official Website : https://OpenSpeedTest.COM | Email: support@openspeedtest.com
+     Developed by : Vishnu | https://Vishnu.Pro | Email : me@vishnu.pro 
+            
+     HTML5 Network Performance Estimation Tool -> [JS,XHR,SVG,HTML,CSS]
+     Started in 2011 and Moved to OpenSpeedTest.COM Dedicated Project/Domain Name in 2013.
+     SpeedTest Script -> 2013 -> Beta | 2015 -> V1 | 2019 ->V2 | 2020 V2.1 | 2021 V2.12 | 2022 V2.5.
 
-    var comopenspeedtesturl = {
-      "serverList": [
-        { "hostName": "/downloading" },
-        { "hostName": "/downloading" },
-        { "hostName": "/downloading" },
-        { "hostName": "/downloading" },
-        { "hostName": "/downloading" }
-      ]
-    };
-    //
-    var comopenspeedtestuurl = {
-      "serverList": [
-        { "hostName": "/upload" }
+     Self-Hosted OpenSpeedTest-Server (iFrame/Nginx) -> 2014.
+     OpenSpeedTest-Server (On-premises)
+     [Docker] -> V1 2019 | V2 2020 | V2.1 2021 | V2.2 2022
+     [Node.js/Electron JS] -> 2020 V1 | 2021 V2 & V2.1 | 2.2 2022
+     Android and iOS OpenSpeedTest-Server App V1.2 2022 
+     Download -> https://go.openspeedtest.com/Server
 
-      ]
-    };
-    var comopenspeedtestcdn = "";
+     Like this Project? Please Donate NOW & Keep us Alive -> https://go.openspeedtest.com/Donate
 
-    var TestServerip = "OpenSpeedTest";
+     Share — copy and redistribute the material in any medium or format for any purpose, even commercially.
+     Read full license terms @ http://go.openspeedtest.com/License
+     If you have any Questions, ideas or Comments Please Send it via -> https://go.openspeedtest.com/SendMessage
 
-    function ostOnload() {
-      console.log("OpenSpeedtest.com V3 Loaded!")
-    }
+*/
 
+ // Add or Remove Server --> Automatically choose the one with least latency
+ var openSpeedTestServerList = [
+    {"ServerName":"Home", "Download":"/downloading", "Upload":"/upload", "ServerIcon":"DefaultIcon"}
+  ];
+      
+// Send pings 'pingSamples' times to each Server URL  
+    var pingSamples = 10;
+// GET or HEAD  // Other Methods may work. but why?
+    var pingMethod = "GET";
+//Choose Download or Upload from Server list
+    var pingFile = "Upload";  
+// The amount of garbage data send to the server in Mb, 30 = 30mb
     var ulDataSize = 30;
-    var ulDelay = 100;
-    var dlDelay = 100;
+// Don't touch it
+    var ulDelay = 300;
+    var dlDelay = 300;
+// Overhead Compensation factor, This is browser based test, Many Unknowns. Currently 4%. That is within the margin of error.
+// you cam pass "clean" through URL pramater and reset it to Zero or set anything under 5%, for that pass 1 for 1% , 2 = 2%, 3 =3% & 4=4% 
+// "clean" will not accept values above 5, so Compensation is limited to maximum 4%
     var upAdjust = 1.04;
     var dlAdjust = 1.04;
+// Minimum 12 Seconds is Expeted. 
     var dlDuration = 12;
     var ulDuration = 12;
-    var ulFinal = 7;
-    var dlFinal = 7;
-    var dlThreads = 4;
-    var ulThreads = 4;
-    var showResult = "//openspeedtest.com/results/widget.php?r=";
+// 6 is the common limit found on most browser.
+    var dlThreads = 6;
+    var ulThreads = 6;
+//Save Data to a Database
+    var saveData = false;
+    var saveDataURL = "//yourDatabase.Server.com:4500/save?data=";
+//Enable or Disable Stress Test
+    var stressTest = true;
+ 
+function ostOnload() {
+      // Execute someting when everything ready. 
+      console.log("OpenSpeedtest.com V2.5 Loaded!")
+    }
+  
+  var openChannel = "dev";
+
   </script>
 
 
@@ -337,9 +342,9 @@ If you like to make any modification to this application please contact support@
 
     <symbol id="jitterMob" viewBox="0 0 58.1 35.77">
       <text id="pingMobres" transform="translate(11.07 18.05)" class="rtextnum">--</text>
-      <text x="-5" y="33.46" class="rtextmbms">Jitter</text>
+      <text x="-8" y="33.46" class="rtextmbms">Jitter</text>
       <text id="JitterResultMon" x="17" y="33.46" class="jitter-Mob">--</text>
-      <text id="JitterResultms" x="33" y="33.46" class="rtextmbms">ms</text>
+      <text id="JitterResultms" x="36" y="33.46" class="rtextmbms">ms</text>
 
     </symbol>
     <symbol id="settings" viewBox="0 0 100 125">
@@ -388,7 +393,7 @@ If you like to make any modification to this application please contact support@
 
     </symbol>
 
-
+<a id="resultsData">
     <svg class="Desktop" viewBox="0 0 586 346">
       <title id="title1">HTML5 internet speed test application! by OpenSpeedtest.com</title>
       <g id="UI-Desk">
@@ -632,7 +637,7 @@ If you like to make any modification to this application please contact support@
 
     </svg>
 
-
+  </a>
     <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#56c4fb" />
       <stop offset="100%" stop-color="#0baeff" />
@@ -650,7 +655,7 @@ If you like to make any modification to this application please contact support@
     <a id='text' href="http://openspeedtest.com?ref=OfflineTool">SpeedTest by
       OpenSpeedTest.COM</a>
   </div>
-  <script src="app.js"></script>
+  <script src="appv2.js"></script>
   <script>
     (function (i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
