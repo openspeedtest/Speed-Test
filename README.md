@@ -63,6 +63,8 @@ Overhead Compensation factor, This is browser based test, Many Unknowns. Current
 
 Take a look at index.html, you can set a custom ping sample size, threads, upload data size, initial dlDuration etc. 
 
+
+
 **TLDR: If you need to test 10Gbps or more. You may need to use the latest hardware. Use Safari or Chrome in Private Window or Incognito Window.**
 
 
