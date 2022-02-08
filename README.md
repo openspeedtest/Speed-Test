@@ -59,7 +59,7 @@ Edit Index.html
 ````
 http://192.168.1.5?clean
 ````
-Overhead Compensation factor, This is browser based test, Many Unknowns. Currently 4%. That is within the margin of error. you cam pass "clean" as a URL pramater and reset it to Zero or set anything under 5%, for that pass 1 for 1% , 2 = 2%, 3 =3% & 4=4% , "clean" will not accept values above 5, so Compensation is limited to maximum 4%
+Overhead Compensation factor, This is browser based test, Many Unknowns. Currently 4%. That is within the margin of error. you can pass "clean" as a URL pramater and reset it to Zero or set anything under 5%, for that pass 1 for 1% , 2 = 2%, 3 =3% & 4=4% , "clean" will not accept values above 5, so Compensation is limited to maximum 4%
 
 Take a look at index.html, you can set a custom ping sample size, threads, upload data size, initial dlDuration etc. 
 
