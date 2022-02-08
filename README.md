@@ -4,7 +4,7 @@ Hi! I'm [Vishnu](https://vishnu.pro) the one who developed **[OpenSpeedTest™�
 
 Tested up to 10Gbps on real NIC and up to 30Gbps on Virtual NIC. You can run a speed test from any device with a Web Browser that is IE10 or new. That means you can test your network speed from your Smart TV, Console, etc. No additional plugins or software required.
 
-## TLDR: If you need to test 10Gbps or more. You may need to use the latest hardware. Use Safari or Chrome in Private Window or Incognito Window.
+**TLDR: If you need to test 10Gbps or more. You may need to use the latest hardware. Use Safari or Chrome in Private Window or Incognito Window.**
 
 
 For testing 10GbE or more, you will need to use the latest hardware. I used M1 MacMini with Built-in 10GbE and a Linux Machine with AMD Ryzen™ 9 3900XT. Safari was the fastest browser when I tested it. Chrome and Chromium Edge can handle 10Gbps or more on macOS and Linux. You can test more than 10Gbps with Chrome or Safari on M1 MacMini or newer hardware. Or on a Linux Machine with Chrome or Chromium browser using a 3900XT or newer Processor. Up to 2.5 to 3.6 Gbps can be tested on almost all popular browsers and devices. Windows max limit was around 8.5 Gbps for download and 9.4Gbps for upload. Tested on Edge and Chrome. Use Private Window or Incognito Window if you found unusual test results. Probably some Extensions are slowing the speed test process. This tool can be used to check the browser performance and impact of Extensions on your browsing experience.
@@ -18,28 +18,40 @@ You have two options here. If you need a custom deployment, use our source code 
 
 **This is docker implementation using  nginxinc/nginx-unprivileged:stable-alpine. Around 10 Mb in size, uses significantly fewer resources.**
 
-**Docker install instructions:**
+### Docker install instructions:
 
 Install Docker and run the following command!
 
-1.  **docker run --restart=unless-stopped --name openspeedtest -d -p 3000:3000 -p 3001:3001 openspeedtest/latest**
+1.  ````bash
+    docker run --restart=unless-stopped \ 
+    --name openspeedtest -d \ #set name and Run container in background and print container ID
+    -p 3000:3000 \ #Host-port:container-port for http
+    -p 3001:3001 \ #Host-port:container-port for https
+    openspeedtest/latest #Image
+    ````
     
 2.  Now open your browser and direct it to:
     
+    A: For **HTTP** use:  [http://YOUR-SERVER-IP:3000](http://your-nas-ip:3000/)
 
-A: For **HTTP** use:  [http://YOUR-SERVER-IP:3000](http://your-nas-ip:3000/)
+    B: For **HTTPS** use:  [https://YOUR-SERVER-IP:3001](https://your-nas-ip:3001/)
 
-B: For **HTTPS** use:  [https://YOUR-SERVER-IP:3001](https://your-nas-ip:3001/)
-
-**How to use your own SSL Certificate?** 
+### How to use your own SSL Certificate?
  
 You can mount a folder with your own SSL certificate to this docker container by adding the following line to the above command. 
 
-**-v** */PATH-TO-YOUR-OWN-SSL-CERTIFICATE***:/etc/ssl/**
+````bash 
+-v /${PATH-TO-YOUR-OWN-SSL-CERTIFICATE}:/etc/ssl/
+````
+The folder needs to contain:
+- `nginx.crt` 
+- `nginx.key` 
 
-I am adding a folder with **nginx.crt** and **nginx.key** from my desktop by using the following command. 
-
-**docker run -v /Users/vishnu/Desktop/docker/:/etc/ssl/ --restart=unless-stopped --name openspeedtest -d -p 3000:3000 -p 3001:3001 openspeedtest/latest**
+I am adding a folder with nginx.crt and nginx.key from my desktop by using the following command. 
+````bash 
+docker run -v /Users/vishnu/Desktop/docker/:/etc/ssl/ \ #Added ssl cert.
+--restart=unless-stopped --name openspeedtest -d -p 3000:3000 -p 3001:3001 openspeedtest/latest
+````
 
 Docker images run better on Linux Platforms, including your NAS. But if you install docker on macOS or Windows, you may see poor performance. I asked this on Docker forums, and they told me macOS and Windows support is for Development purposes only. For Production, you need to use any Linux Platform.
 
