@@ -13,7 +13,7 @@ To enable stress pass 'stress' keyword as a URL parameter.
 ````
 http://192.168.1.5?stress=low
 ````
-After stress keyword you should give a value, number of seconds or preset values "low", "medium" ,"high" ,"veryhigh" ,"extreem" will run a speed test for 300,600,900,1800,3600 seconds respectively. or you can specofy eg:5000 directly without any preset keywords. 
+After stress keyword you should give a value, number of seconds or preset values such as "low", "medium" ,"high" ,"veryhigh" ,"extreem". Will run a speed test for 300,600,900,1800,3600 seconds respectively. Or you can specify eg:5000 directly without any preset keywords. 
 
 ````
 http://192.168.1.5?stress=5000
