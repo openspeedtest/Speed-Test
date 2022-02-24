@@ -2,7 +2,40 @@
 
 Hi! I'm [Vishnu](https://vishnu.pro) the one who developed **[OpenSpeedTest™️](https://openspeedtest.com)**. OpenSpeedTest use XMLHttpRequest (XHR), HTML, CSS, JS, & SVG For this network performance estimation tool. I started this project in 2011 and moved to OpenSpeedTest.com dedicated Project/Domain Name in 2013.
 
-Tested up to 10Gbps on real NIC and up to 30Gbps on Virtual NIC. You can run a speed test from any device with a Web Browser that is IE10 or new. That means you can test your network speed from your Smart TV, Console, etc. No additional plugins or software required.
+## Why **[OpenSpeedTest](https://openspeedtest.com)**?
+
+### Secure by Design.
+
+OpenSpeedTest contains Only "STATIC" Files like HTML,CSS & JS.
+So you don't need to worry about Security Updates or Hidden Exploits that may compromise your secure environments. 
+
+### Lightweight, High Performance.
+
+OpenSpeedTest is written in Pure JavaScript. No Third-Party frameworks or libraries were used. SpeedTest script file size is under 7kB gzip. The unexpected side effect of using Pure JavaScript is High Performance. 
+
+### Run a speed test from Any Device.
+
+OpenSpeedTest will run on Any Web Browser that is IE10 or new.
+
+### Ready for Any Display Size and Resolution.
+
+OpenSpeedTest User interface is written in SVG.  
+
+You can create your own SpeedTest Server using OpenSpeedTest.
+
+### Server Requirements
+
+Nginx, Apache, IIS, Express or Any Web server that support HTTP/1.1.
+
+- Accept, GET, POST, HEAD & OPTIONS, Response 200 OK.
+- Accept, POST to Static Files, Response 200 OK.
+- Timeout greater than 60 seconds. 
+- Disable Access logs for Increasing server performance.
+- Improve Time to First Byte (TTFB)
+
+### Or, You can use OpenSpeedTest-Server.
+
+OpenSpeedTest-Server is available as Docker Image, Windows Mac, Linux, Android, & iOS Applications.
 
 ### New features:
 
@@ -63,6 +96,8 @@ Overhead Compensation factor, This is browser based test, Many Unknowns. Current
 
 Take a look at index.html, you can set a custom ping sample size, threads, upload data size, initial dlDuration etc. 
 
+
+Tested up to 10Gbps on real NIC and up to 30Gbps on Virtual NIC. You can run a speed test from any device with a Web Browser that is IE10 or new. That means you can test your network speed from your Smart TV, Console, etc. No additional plugins or software required.
 
 
 **TLDR: If you need to test 10Gbps or more. You may need to use the latest hardware. Use Safari or Chrome in Private Window or Incognito Window.**
