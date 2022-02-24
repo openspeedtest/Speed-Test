@@ -25,7 +25,7 @@ You can create your own SpeedTest Server using OpenSpeedTest.
 
 ### Server Requirements
 
-Nginx, Apache, IIS, Express or Any Web server that support HTTP/1.1.
+Nginx, Apache, IIS, Express, or Any Web server that supports HTTP/1.1.
 
 - Accept, GET, POST, HEAD & OPTIONS, Response 200 OK.
 - Accept, POST to Static Files, Response 200 OK.
