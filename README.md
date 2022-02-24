@@ -32,6 +32,7 @@ Nginx, Apache, IIS, Express or Any Web server that support HTTP/1.1.
 - Timeout greater than 60 seconds. 
 - Disable Access logs for Increasing server performance.
 - Improve Time to First Byte (TTFB)
+- **[Follow our Nginx Config. ](https://github.com/openspeedtest/Nginx-Configuration)**
 
 ### Or, You can use OpenSpeedTest-Server.
 
