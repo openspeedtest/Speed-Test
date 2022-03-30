@@ -21,9 +21,9 @@ OpenSpeedTest will run on Any Web Browser that is IE10 or new.
 
 OpenSpeedTest User interface is written in SVG.  
 
-You can create your own SpeedTest Server using OpenSpeedTest.
+# You can Create Your Own SpeedTest Server using OpenSpeedTest.
 
-### Server Requirements
+### Server Requirements :
 
 Nginx, Apache, IIS, Express, or Any Web server that supports HTTP/1.1.
 
