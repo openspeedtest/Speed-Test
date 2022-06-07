@@ -11,7 +11,7 @@ So you don't need to worry about Security Updates or Hidden Exploits that may co
 
 ### Lightweight, High Performance.
 
-OpenSpeedTest is written in Pure JavaScript. No Third-Party frameworks or libraries were used. SpeedTest script file size is under 7kB gzip. The unexpected side effect of using Pure JavaScript is High Performance. 
+OpenSpeedTest is written in Pure JavaScript. No Third-Party frameworks or libraries were used. SpeedTest script file size is under 8kB gzip. The unexpected side effect of using Pure JavaScript is High Performance. 
 
 ### Run a speed test from Any Device.
 
@@ -42,12 +42,18 @@ OpenSpeedTest-Server is available as Docker Image, Windows Mac, Linux, Android, 
 
 1. Stress Test.
 
-To enable stress pass 'stress' keyword as a URL parameter.
+To enable stress pass 'Stress' or 'S' keyword as a URL parameter.
 
 ````
 http://192.168.1.5?stress=low
 ````
-After stress keyword you should give a value, number of seconds or preset values such as "low", "medium" ,"high" ,"veryhigh" ,"extreem". Will run a speed test for 300,600,900,1800,3600 seconds respectively. Or you can specify eg:5000 directly without any preset keywords. 
+After stress keyword you should give a value, number of seconds or preset values such as "low", "medium" ,"high" ,"veryhigh" ,"extreme", "day", "year". Will run a speed test for 300,600,900,1800,3600,86400,31557600 seconds respectively. Also you can feed the first letter of each parameter and its values.
+
+````
+http://192.168.1.5?s=l
+````
+s=l is same as passing Stress=low
+Or you can specify eg:5000 directly without any preset keywords. 
 
 ````
 http://192.168.1.5?stress=5000
@@ -55,19 +61,19 @@ http://192.168.1.5?stress=5000
 
 2. Start a Speedtest Automatically.
 
-Starts a speed test automatically 
+Starts a speed test automatically. 
 ````
 http://192.168.1.5?run
 ````
-Start a speed test automatically after few seconds
+Start a speed test automatically after few seconds.
 ````
-http://192.168.1.5?run=10
+http://192.168.1.5?run=10 or http://192.168.1.5?r=10
 ````
 
-You can pass multiple keywords 
+You can pass multiple keywords and it's not casesensitive.
 
 ````
-http://192.168.1.5?run&stress=300
+http://192.168.1.5?run&stress=300 OR http://192.168.1.5?R&S=300
 ````
 This will start a speed test immediately and run for 300 seconds in each direction. That is 300 seconds for download and 300 seconds for upload. 
 
@@ -93,7 +99,50 @@ Edit Index.html
 ````
 http://192.168.1.5?clean
 ````
-Overhead Compensation factor, This is browser based test, Many Unknowns. Currently 4%. That is within the margin of error. you can pass "clean" as a URL parameter and reset it to Zero or set anything under 5%, for that pass 1 for 1% , 2 = 2%, 3 =3% & 4=4% , "clean" will not accept values above 5, so Compensation is limited to maximum 4%
+Overhead Compensation factor, This is browser based test, Many Unknowns. Currently 4%. That is within the margin of error.
+You can pass "Clean" or "C" as a URL Parameter and reset Overhead Compensation factor to Zero or set any value between 0 and 4. 1 = 1% to 4 = 4%.
+"clean" will not accept values above 4, so Compensation is limited to maximum 4%.
+
+6. Change default limit of 6 parallel http connections to Server
+
+````
+http://192.168.1.5?XHR=3 OR http://192.168.1.5?X=3
+````
+Allow user to Change default limit of 6 parallel http connections to Server  | Accept values above 1 and max 32
+pass "XHR" or "X" as a URL Parameter.
+
+7. Select different server to run a speed test
+
+````
+http://192.168.1.5?Host=http://192.168.55.1:90 OR http://192.168.1.5?h=http://192.168.55.1:90
+````
+Pass "Host" or "H" as a  URL Parameter.
+Accept only valid http urls like "http://192.168.1.10:3000" or "https://yourHost.com".
+
+8. Select and run one test at a time, download, upload or ping.
+
+````
+http://192.168.1.5?Test=upload OR http://192.168.1.5?t=u
+````
+Allow user to select and run one test at a time, download, upload or ping
+Pass "Test" or "T" as a URL Parameter.
+
+9. Set a PingTimeout dynamically by passing "Out" or "o" as a URL Parameter 
+
+````
+http://192.168.1.5?Out=7000 OR http://192.168.1.5?O=7000
+````
+If Server not responded within 5 Seconds for any requests we send ('pingSamples' times)
+We will show Network Error, you can change the limit here.
+In milliseconds, if you need to set 6 seconds. Change value to 6000.
+
+10. Set the Number of ping samples by adding "Ping" or "P" as a URL Parameter 
+
+````
+http://192.168.1.5?Ping=500 OR http://192.168.1.5?p=500
+````
+More samples = more accurate representation. Ping = 500 will send 501 requests to server to find the accurate ping value.
+
 
 Take a look at index.html, you can set a custom ping sample size, threads, upload data size, initial dlDuration etc. 
 
