@@ -31,16 +31,14 @@ Developed by : Vishnu | https://Vishnu.Pro | Email : me@vishnu.pro
         
 HTML5 Network Performance Estimation Tool -> [JS,XHR,SVG,HTML,CSS]
 Started in 2011 and Moved to OpenSpeedTest.COM Dedicated Project/Domain Name in 2013.
-SpeedTest Script -> 2013 -> Beta | 2015 -> V1 | 2019 ->V2 | 2020 V2.1 | 2021 V2.12.
-
+SpeedTest Script -> 2013 -> Beta | 2015 -> V1 | 2019 ->V2 | 2020 V2.1 | 2021 V2.12 | 2022 V2.5 & 2.5.1.
 Self-Hosted OpenSpeedTest-Server (iFrame/Nginx) -> 2014.
 OpenSpeedTest-Server (On-premises)
-[Docker] -> V1 2019 | V2 2020 | V2.1 2021 
-[Node.js/Electron JS] -> 2020 V1 | 2021 V2 & V2.1
+[Docker] -> V1 2019 | V2 2020 | V2.1 2021 | V2.2 2022
+[Node.js/Electron JS] -> 2020 V1 | 2021 V2 & V2.1 | 2.2 2022
+Android and iOS OpenSpeedTest-Server App V1.2 2022 
 Download -> https://go.openspeedtest.com/Server
-
 Like this Project? Please Donate NOW & Keep us Alive -> https://go.openspeedtest.com/Donate
-
 Share — copy and redistribute the material in any medium or format for any purpose, even commercially.
 Read full license terms @ http://go.openspeedtest.com/License
 If you have any Questions, ideas or Comments Please Send it via -> https://go.openspeedtest.com/SendMessage

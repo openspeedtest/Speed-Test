@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Speed Test by OpenSpeedtest.com</title>
   <meta name="description"
-    content="The best HTML5 Internet Speed Test. No Flash or Java needed ✅The Most Accurate Online Broadband Speed Test. Work on Any Web Browser. No Plugins needed." />
+    content="Test your network speed now. Pure HTML5 Network Performance Estimation Tool. by OpenSpeedTest™️" />
   <link href="css/app.css" rel="stylesheet" type="text/css" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -20,10 +19,8 @@
   <meta name="msapplication-config" content="images/icons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 </head>
-
 <body>
   <script type="text/javascript">
-
 /*
      ©CopyRight 2013-2022 by OpenSpeedTest.COM. All Rights Reserved. 
      Official Website : https://OpenSpeedTest.COM | Email: support@openspeedtest.com
@@ -31,21 +28,18 @@
             
      HTML5 Network Performance Estimation Tool -> [JS,XHR,SVG,HTML,CSS]
      Started in 2011 and Moved to OpenSpeedTest.COM Dedicated Project/Domain Name in 2013.
-     SpeedTest Script -> 2013 -> Beta | 2015 -> V1 | 2019 ->V2 | 2020 V2.1 | 2021 V2.12 | 2022 V2.5.
-
+     SpeedTest Script -> 2013 -> Beta | 2015 -> V1 | 2019 ->V2 | 2020 V2.1 | 2021 V2.12 | 2022 V2.5 & 2.5.1.
      Self-Hosted OpenSpeedTest-Server (iFrame/Nginx) -> 2014.
      OpenSpeedTest-Server (On-premises)
      [Docker] -> V1 2019 | V2 2020 | V2.1 2021 | V2.2 2022
      [Node.js/Electron JS] -> 2020 V1 | 2021 V2 & V2.1 | 2.2 2022
      Android and iOS OpenSpeedTest-Server App V1.2 2022 
      Download -> https://go.openspeedtest.com/Server
-
      Like this Project? Please Donate NOW & Keep us Alive -> https://go.openspeedtest.com/Donate
-
      Share — copy and redistribute the material in any medium or format for any purpose, even commercially.
      Read full license terms @ http://go.openspeedtest.com/License
-     If you have any Questions, ideas or Comments Please Send it via -> https://go.openspeedtest.com/SendMessage
 
+     If you have any Questions, ideas or Comments Please Send it via -> https://go.openspeedtest.com/SendMessage
 */
 
  // Add or Remove Server --> Automatically choose the one with least latency
@@ -53,11 +47,19 @@
     {"ServerName":"Home", "Download":"/downloading", "Upload":"/upload", "ServerIcon":"DefaultIcon"}
   ];
       
-// Send pings 'pingSamples' times to each Server URL  
+// Send pings 'pingSamples' times to each Server URL.
     var pingSamples = 10;
+// Set a pingSample dynamically by passing "Ping" or "p" as a URL Parameter.
+    var setPingSamples = true;
+// If Server not responded within 5 Seconds for any requests we send ('pingSamples' times)
+// We will show Network Error, you can change the limit here.
+// In milliseconds, if you need to set 6 seconds. Change value to 6000.
+    var pingTimeOut = 5000; 
+// Set a PingTimeout dynamically by passing "Out" or "O" as a URL Parameter    
+    var setPingTimeout = true;
 // GET or HEAD  // Other Methods may work. but why?
     var pingMethod = "GET";
-//Choose Download or Upload from Server list
+//Choose Download or Upload from Server list, If you Prefer Download change pingMethod to HEAD.
     var pingFile = "Upload";  
 // The amount of garbage data send to the server in Mb, 30 = 30mb
     var ulDataSize = 30;
@@ -65,25 +67,44 @@
     var ulDelay = 300;
     var dlDelay = 300;
 // Overhead Compensation factor, This is browser based test, Many Unknowns. Currently 4%. That is within the margin of error.
-// you cam pass "clean" through URL pramater and reset it to Zero or set anything under 5%, for that pass 1 for 1% , 2 = 2%, 3 =3% & 4=4% 
-// "clean" will not accept values above 5, so Compensation is limited to maximum 4%
     var upAdjust = 1.04;
     var dlAdjust = 1.04;
+// You can pass "Clean" or "C" as a URL Parameter and reset Overhead Compensation factor to Zero or set any value between 0 and 4. 1 = 1% to 4 = 4% 
+// "clean" will not accept values above 4, so Compensation is limited to maximum 4%.
+    var enableClean = true;
 // Minimum 12 Seconds is Expected. 
     var dlDuration = 12;
     var ulDuration = 12;
 // 6 is the common limit found on most browser.
+// Choose  Number for parallel http connections to Server | Default is 6 
     var dlThreads = 6;
     var ulThreads = 6;
-//Save Data to a Database
+// Allow user to Change default limit of 6 parallel http connections to Server  | Accept values above 1 and max 32
+// pass "XHR" or "X" as a URL Parameter
+    var setHTTPReq = true;
+// Save Data to a Database
     var saveData = false;
     var saveDataURL = "//yourDatabase.Server.com:4500/save?data=";
-//Enable or Disable Stress Test
+// Allow user to change default 12 seconds test duration
+// Pass "Stress" or "S" as a URL Parameter.
     var stressTest = true;
+// Allow user to select and run one test at a time, download, upload or ping
+// Pass "Test" or "T" as a URL Parameter.
+    var selectTest = true;
+// Allow user to select different server to run a test  
+// Pass "Host" or "H" ad a  URL Parameter.
+// Accept only valid http urls like "http://192.168.1.10:3000" or "https://yourHost.com"
+    var selectServer = true;
+// Start a test Automatically, without pressing the start button
+// You can Delay the test for 'n' seconds by passing any number as value for Run Keyword. eg: "Run=10" or "R=10" for delay the test by 10 Seconds.
+// Pass "Run" or "R" as a URL Parameter to start a test instantly. 
+    var enableRun = true;
+// "Run" will not work if you already using 'selectTest' "Test" or "T" Keyword.
+
  
 function ostOnload() {
-      // Execute someting when everything ready. 
-      console.log("OpenSpeedtest.com V2.5 Loaded!")
+      // Execute something when everything ready. 
+      console.log("OpenSpeedtest.com V2.5.1 Loaded!")
     }
   
   var openChannel = "dev";
@@ -95,22 +116,21 @@ function ostOnload() {
 Share — copy and redistribute the material in any medium or format
 for any purpose, even commercially.
 
-If you like to make any modification to this application please contact support@openspeedtest.com
+You can play with the CSS, HTML & SVG files to change the colors or add your support desk info to this page.
+Also you can add your company logo anywhere on this page.
+If you like to make any other modification to this application or need a different license for your organization 
+please contact support@openspeedtest.com
 -->
   <div id="loading_app" class="spinner">
     <div class="bounce1"></div>
     <div class="bounce2"></div>
     <div class="bounce3"></div>
   </div>
-
   <svg version="1.1" id="OpenSpeedtest" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
     class="openSpeedtestApp">
-
-    <symbol id="logo" viewBox="0 0 262.79 50.38">
-
-      <a target="_blank" href="http://openspeedtest.com?ref=Offline-Intro&Auto=5">
-
-        <g>
+  <symbol id="logo" viewBox="0 0 262.79 50.38">
+    <a target="_blank" href="http://openspeedtest.com?ref=Offline-Intro&Auto=5">
+     <g>
           <path
             d="M39.77,15.17A27,27,0,0,0,34,6.71c-2.49-2.13-4.33-2.13-6.68,0a15.2,15.2,0,0,0-2.55,3.06c-5.4,8.59-9.17,17.68-9.31,28a22.39,22.39,0,0,0,.5,5.33C16.83,46.7,19,48,22.66,47.2a32.27,32.27,0,0,0,7-2.56c-1.78,2.63-6.47,5.4-9.38,5.68a7.44,7.44,0,0,1-7.46-3.62,17.59,17.59,0,0,1-2.62-9.16A41.31,41.31,0,0,1,13.42,19C15.55,14.1,18,9.41,21.66,5.51a18.35,18.35,0,0,1,3.91-3.2C29.33.18,33,.82,35.72,4.09a19.33,19.33,0,0,1,4,9.94Z"
             style="fill: #4d4d4d" />
@@ -367,7 +387,7 @@ If you like to make any modification to this application please contact support@
       <line x1="5" y1="5" x2="405" y2="5"></line>
     </symbol>
     <symbol id="ConnectError" viewBox="0 0 489.6 489.6">
-
+      <a target="_blank" href="https://openspeedtest.com/FAQ.php?ref=NetworkError">
       <g>
         <g>
           <path d="M179.6,235.6c-33.7,10.3-65.5,28.5-92.2,55.1l46.6,46.6c13.9-13.9,30.1-24.8,47.6-32.5L179.6,235.6z" />
@@ -383,7 +403,7 @@ If you like to make any modification to this application please contact support@
       </g>
 
 
-
+    </a>
 
     </symbol>
 
@@ -422,7 +442,7 @@ If you like to make any modification to this application please contact support@
             and back. This is the sum of all encoding, queueing, processing, decoding, and propagation delays in both
             directions. Essentially, it's the delay when A may be expecting an answer from B for a request that requires
             very little processing. A fast ping means a more responsive connection, especially in applications where
-            timing is everything (like video games). Ping is measured in milliseconds (ms).
+            timing is everything (like video games). Ping is measured in Milliseconds (ms).
 
             Jitter is simply the difference in Ping "Round-trip time" . In other words, jitter is measuring time
             difference in packet inter-arrival time. Jitter helps diagnose internet connection stability. The higher the
@@ -450,10 +470,10 @@ If you like to make any modification to this application please contact support@
         <use xlink:href="#pingSymbol" x="351.4" y="243.8" width="14.3" height="14.4"></use>
         <use xlink:href="#pingSymbol" x="481.3" y="244.6" width="14.33" height="14.4"></use>
         <use xlink:href="#pingRc3" x="367.01" y="244.68" width="28" height="16">
-          <title id="title1">Ping is measured in milliseconds (ms).</title>
+          <title id="title1">Ping is measured in Milliseconds (ms).</title>
         </use>
         <use xlink:href="#jitterRc3" x="495.61" y="246.3" width="39.95" height="13.85">
-          <title id="title1">Jitter is measured in milliseconds (ms).</title>
+          <title id="title1">Jitter is measured in Milliseconds (ms).</title>
         </use>
         <use xlink:href="#upSymbol" class="Symbol" x="329" y="146.5" width="11.8" height="13.9"></use>
         <use xlink:href="#downSymbol" class="Symbol" x="318.7" y="51.9" width="11.8" height="13.8"></use>
@@ -497,10 +517,10 @@ If you like to make any modification to this application please contact support@
         <use xlink:href="#pingSymbol" x="351.4" y="243.8" width="14.3" height="14.4"></use>
         <use xlink:href="#pingSymbol" x="481.3" y="244.6" width="14.33" height="14.4"></use>
         <use xlink:href="#pingRc3" x="367.01" y="244.68" width="28" height="16">
-          <title id="title1">Ping is measured in milliseconds (ms).</title>
+          <title id="title1">Ping is measured in Milliseconds (ms).</title>
         </use>
         <use xlink:href="#jitterRc3" x="495.61" y="246.3" width="39.95" height="13.85">
-          <title id="title1">Jitter is measured in milliseconds (ms).</title>
+          <title id="title1">Jitter is measured in Milliseconds (ms).</title>
         </use>
         <use xlink:href="#upSymbol" class="Symbol" x="329" y="146.5" width="11.8" height="13.9"></use>
         <use xlink:href="#downSymbol" class="Symbol" x="318.7" y="51.9" width="11.8" height="13.8"></use>
@@ -568,7 +588,7 @@ If you like to make any modification to this application please contact support@
             and back. This is the sum of all encoding, queueing, processing, decoding, and propagation delays in both
             directions. Essentially, it's the delay when A may be expecting an answer from B for a request that requires
             very little processing. A fast ping means a more responsive connection, especially in applications where
-            timing is everything (like video games). Ping is measured in milliseconds (ms).
+            timing is everything (like video games). Ping is measured in Milliseconds (ms).
 
             Jitter is simply the difference in Ping "Round-trip time" . In other words, jitter is measuring time
             difference in packet inter-arrival time. Jitter helps diagnose internet connection stability. The higher the
@@ -592,7 +612,7 @@ If you like to make any modification to this application please contact support@
           <title id="title1">Upload speed is measured in megabits per second (Mbps).</title>
         </use>
         <use xlink:href="#pingRc3" x="143.88" y="301.72" width="26" height="15">
-          <title id="title1">Ping is measured in milliseconds (ms).</title>
+          <title id="title1">Ping is measured in Milliseconds (ms).</title>
         </use>
         <use xlink:href="#upSymbol" class="Symbol" x="221.8" y="303.42" width="12.3" height="10.6"></use>
         <use xlink:href="#downSymbol" class="Symbol" x="7.7" y="303.42" width="10.6" height="12.4"></use>
@@ -655,18 +675,17 @@ If you like to make any modification to this application please contact support@
     <a id='text' href="http://openspeedtest.com?ref=OfflineTool">SpeedTest by
       OpenSpeedTest.COM</a>
   </div>
-  <script src="appv2.js"></script>
-  <script>
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  <script src="app-2.5.1.js"></script>
 
-    ga('create', 'UA-44225000-1', 'auto');
-    ga('send', 'pageview');
-  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TNQCBKZ');</script>
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNQCBKZ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 </body>
 
 </html>
