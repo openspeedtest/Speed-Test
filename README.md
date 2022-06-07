@@ -40,7 +40,7 @@ OpenSpeedTest-Server is available as Docker Image, Windows Mac, Linux, Android, 
 
 ### New features:
 
-1. Stress Test.
+1. Stress Test. (Continuous Speed Test)
 
 To enable stress pass 'Stress' or 'S' keyword as a URL parameter.
 
