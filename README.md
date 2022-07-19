@@ -298,7 +298,7 @@ You have two options here. If you need a custom deployment, use our source code 
 
 ````bash
 
-sudo docker run --restart=unless-stopped --name openspeedtest -d -p 3000:3000 -p 3001:3001
+sudo docker run --restart=unless-stopped --name openspeedtest -d -p 3000:3000 -p 3001:3001 openspeedtest/latest
 
 ````
 Now open your browser and direct it to:
