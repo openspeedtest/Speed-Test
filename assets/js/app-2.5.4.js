@@ -1,5 +1,4 @@
 /*
-     ©CopyRight 2013-2023 by OpenSpeedTest.COM. All Rights Reserved. 
      Official Website : https://OpenSpeedTest.COM | Email: support@openspeedtest.com
      Developed by : Vishnu | https://Vishnu.Pro | Email : me@vishnu.pro 
      Like this Project? Please Donate NOW & Keep us Alive -> https://go.openspeedtest.com/Donate
