@@ -1,8 +1,8 @@
-#  **[Speed Test](https://openspeedtest.com?Run&ref=Github)** by OpenSpeedTest™ - Free & Open-Source HTML5 Network Performance Estimation Tool.
+#  **[SpeedTest by OpenSpeedTest™](https://openspeedtest.com?Run&ref=Github)** - Free & Open-Source HTML5 Network Performance Estimation Tool.
 
   
 
-Hi! I'm [Vishnu](https://vishnu.pro), the one who developed **[OpenSpeedTest™](https://openspeedtest.com?Run&ref=Github)**. **[Speed Test](https://openspeedtest.com?Run&ref=Github)** by OpenSpeedTest™ is a Free and Open-Source HTML5 Network Performance Estimation Tool Written in Vanilla Javascript and only uses built-in Web APIs like XMLHttpRequest (XHR), HTML, CSS, JS, & SVG. No Third-Party frameworks or libraries are Required. All we need is a static web server like Nginx. I started this project in 2011 and moved to OpenSpeedTest.com dedicated Project/Domain Name in 2013.
+SpeedTest by OpenSpeedTest™ is a Free and Open-Source HTML5 Network Performance Estimation Tool Written in Vanilla Javascript and only uses built-in Web APIs like XMLHttpRequest (XHR), HTML, CSS, JS, & SVG. No Third-Party frameworks or libraries are Required. All we need is a static web server like Nginx. I started this project in 2011 and moved to OpenSpeedTest.com dedicated Project/Domain Name in 2013.
   
 
 [![Download OpenSpeedTest-Server V2.1](https://github.com/openspeedtest/v2-Test/raw/main/images/10G-S.gif)](https://go.openspeedtest.com/Server  "Download OpenSpeedTest-Server V2.1")
@@ -10,7 +10,7 @@ Hi! I'm [Vishnu](https://vishnu.pro), the one who developed **[OpenSpeedTest™]
 
 **No client-side software or plugin is required. You can run a network speed test from any device with a web browser that is IE10 or new.**
 
-##  Why **[OpenSpeedTest](https://openspeedtest.com)**?
+##  Why OpenSpeedTest
 
   
 
