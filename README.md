@@ -121,11 +121,11 @@ http://192.168.1.5?stress=5000
 
   
 
-2. Start a Speedtest Automatically.
+2. Run a speed test automatically
 
   
 
-Starts a speed test automatically.
+Run a speed test automatically on page load.
 
 ````
 
@@ -133,7 +133,7 @@ http://192.168.1.5?run
 
 ````
 
-Start a speed test automatically after few seconds.
+Run a speed test automatically after a few seconds.
 
 ````
 
@@ -143,7 +143,7 @@ http://192.168.1.5?run=10 or http://192.168.1.5?r=10
 
   
 
-You can pass multiple keywords and it's not casesensitive.
+You can pass multiple keywords, and it's not case-sensitive.
 
   
 
@@ -209,7 +209,7 @@ You can pass "Clean" or "C" as a URL Parameter and reset Overhead Compensation f
 
   
 
-6. Change default limit of 6 parallel http connections to Server
+6. Change the default limit of 6 parallel HTTP connections to the Server.
 
   
 
@@ -219,13 +219,13 @@ http://192.168.1.5?XHR=3 OR http://192.168.1.5?X=3
 
 ````
 
-Allow user to Change default limit of 6 parallel http connections to Server | Accept values above 1 and max 32
+Allow the user to Change the default limit of 6 parallel HTTP connections to the Server. 'XHR' will Accept values above 1 and max 32
 
 pass "XHR" or "X" as a URL Parameter.
 
   
 
-7. Select different server to run a speed test
+7. Select a different server to run a speed test.
 
   
 
@@ -237,11 +237,11 @@ http://192.168.1.5?Host=http://192.168.55.1:90 OR http://192.168.1.5?h=http://19
 
 Pass "Host" or "H" as a URL Parameter.
 
-Accept only valid http urls like "http://192.168.1.10:3000" or "https://yourHost.com".
+'HOST' will Accept only valid HTTP URLs like "http://192.168.1.10:3000" or "https://yourHost.com".
 
   
 
-8. Select and run one test at a time, download, upload or ping.
+8. Select and run one test at a time, DOWNLOAD, UPLOAD, or PING.
 
   
 
@@ -251,7 +251,7 @@ http://192.168.1.5?Test=upload OR http://192.168.1.5?t=u
 
 ````
 
-Allow user to select and run one test at a time, download, upload or ping
+'TEST' Allow the user to select and run one test at a time, Download, Upload, or Ping.
 
 Pass "Test" or "T" as a URL Parameter.
 
@@ -269,9 +269,9 @@ http://192.168.1.5?Out=7000 OR http://192.168.1.5?O=7000
 
 If Server not responded within 5 Seconds for any requests we send ('pingSamples' times)
 
-We will show Network Error, you can change the limit here.
+We will show Network Error, You can change the limit here.
 
-In milliseconds, if you need to set 6 seconds. Change value to 6000.
+In milliseconds, if you need to set 6 seconds. Change the value to 6000.
 
   
 
