@@ -94,7 +94,7 @@ To enable the stress test. Pass `Stress` or `S` keyword as a URL parameter.
 
 ````
 
-`http://192.168.1.5?Stress=Low`
+http://192.168.1.5?Stress=Low
 
 ````
 
@@ -103,13 +103,13 @@ After the `STRESS` or `S` keyword, you can specify the number of seconds you nee
 
 ````
 
-http://192.168.1.5?s=l
+http://192.168.1.5?S=L
 
 ````
 
-s=l is the same as passing Stress=low
+`S=L` is the same as passing `Stress=low`
 
-Or you can specify eg:5000 directly without any preset keywords.
+Or you can specify the number of seconds eg:5000 directly without any preset keywords.
 
   
 
@@ -129,7 +129,7 @@ Run a speed test automatically on page load.
 
 ````
 
-http://192.168.1.5?run
+http://192.168.1.5?Run
 
 ````
 
@@ -137,7 +137,7 @@ Run a speed test automatically after a few seconds.
 
 ````
 
-http://192.168.1.5?run=10 or http://192.168.1.5?r=10
+http://192.168.1.5?Run=10 or http://192.168.1.5?R=10
 
 ````
 
@@ -149,7 +149,7 @@ You can pass multiple keywords, and it's not case-sensitive.
 
 ````
 
-http://192.168.1.5?run&stress=300 OR http://192.168.1.5?R&S=300
+http://192.168.1.5?Run&Stress=300 OR http://192.168.1.5?R&S=300
 
 ````
 
@@ -161,7 +161,7 @@ This will start a speed test immediately and run for 300 seconds in each directi
 
   
 
-Edit Index.html
+Edit `Index.html`
 
 ````
 
@@ -175,7 +175,7 @@ var saveDataURL = "//yourDatabase.Server.com:4500/save?data=";
 
   
 
-Edit Index.html
+Edit `Index.html`
 
 ````
 
@@ -203,9 +203,9 @@ http://192.168.1.5?clean
 
 Overhead Compensation factor, This is browser based test, Many Unknowns. Currently 4%. That is within the margin of error.
 
-You can pass "Clean" or "C" as a URL Parameter and reset Overhead Compensation factor to Zero or set any value between 0 and 4. 1 = 1% to 4 = 4%.
+You can pass `Clean` or `C` as a URL Parameter and reset Overhead Compensation factor to Zero or set any value between 0 and 4. 1 = 1% to 4 = 4%.
 
-"clean" will not accept values above 4, so Compensation is limited to maximum 4%.
+`Clean` will not accept values above 4, so Compensation is limited to maximum 4%.
 
   
 
@@ -219,9 +219,9 @@ http://192.168.1.5?XHR=3 OR http://192.168.1.5?X=3
 
 ````
 
-Allow the user to Change the default limit of 6 parallel HTTP connections to the Server. 'XHR' will Accept values above 1 and max 32
+Allow the user to Change the default limit of 6 parallel HTTP connections to the Server. `XHR` will Accept values above 1 and max 32
 
-pass "XHR" or "X" as a URL Parameter.
+pass `XHR` or `X` as a URL Parameter.
 
   
 
@@ -235,29 +235,29 @@ http://192.168.1.5?Host=http://192.168.55.1:90 OR http://192.168.1.5?h=http://19
 
 ````
 
-Pass "Host" or "H" as a URL Parameter.
+Pass `Host` or `H` as a URL Parameter.
 
-'HOST' will Accept only valid HTTP URLs like "http://192.168.1.10:3000" or "https://yourHost.com".
+`HOST` will Accept only valid HTTP URLs like `http://192.168.1.10:3000` or `https://yourHost.com`.
 
   
 
-8. Select and run one test at a time, DOWNLOAD, UPLOAD, or PING.
+8. Select and run one test at a time, `DOWNLOAD`, `UPLOAD`, or `PING`.
 
   
 
 ````
 
-http://192.168.1.5?Test=upload OR http://192.168.1.5?t=u
+http://192.168.1.5?Test=Upload OR http://192.168.1.5?T=U
 
 ````
 
-'TEST' Allow the user to select and run one test at a time, Download, Upload, or Ping.
+`TEST` Allow the user to select and run one test at a time, Download, Upload, or Ping.
 
-Pass "Test" or "T" as a URL Parameter.
+Pass `Test` or `T` as a URL Parameter.
 
   
 
-9. Set a PingTimeout dynamically by passing "Out" or "o" as a URL Parameter
+9. Set a PingTimeout dynamically by passing `Out` or `O` as a URL Parameter
 
   
 
@@ -275,17 +275,17 @@ In milliseconds, if you need to set 6 seconds. Change the value to 6000.
 
   
 
-10. Set the Number of ping samples by adding "Ping" or "P" as a URL Parameter
+10. Set the Number of ping samples by adding `Ping` or `P` as a URL Parameter
 
   
 
 ````
 
-http://192.168.1.5?Ping=500 OR http://192.168.1.5?p=500
+http://192.168.1.5?Ping=500 OR http://192.168.1.5?P=500
 
 ````
 
-More samples = more accurate representation. Ping = 500 will send 501 requests to server to find the accurate ping value.
+More samples = more accurate representation. `Ping = 500` will send `501` requests to server to find the accurate ping value.
 Take a look at index.html, you can set a custom ping sample size, threads, upload data size etc.
 
 ## Self-hosted (On-Premise) / (Docker Image/Source Code)
