@@ -52,7 +52,7 @@ OpenSpeedTest User interface is written in SVG.
 
 ###  Server Requirements :
 
-`Nginx`, `Apache`, `IIS`, `Express`, or Any Web server that supports `HTTP/1.1`.
+`Nginx`, `Apache`, `IIS`, `Express`, or Any Web server that supports `HTTP/1.1` or new.
 
 - Accept, `GET`, `POST`, `HEAD` & `OPTIONS`, Response `200 OK`.
 
