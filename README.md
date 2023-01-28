@@ -2,7 +2,7 @@
 
   
 
-SpeedTest by OpenSpeedTest™ is a Free and Open-Source HTML5 Network Performance Estimation Tool Written in Vanilla Javascript and only uses built-in Web APIs like XMLHttpRequest (XHR), HTML, CSS, JS, & SVG. No Third-Party frameworks or libraries are Required. All we need is a static web server like Nginx. I started this project in 2011 and moved to OpenSpeedTest.com dedicated Project/Domain Name in 2013.
+SpeedTest by OpenSpeedTest™ is a Free and Open-Source HTML5 Network Performance Estimation Tool Written in Vanilla Javascript and only uses built-in Web APIs like `XMLHttpRequest` `(XHR)`, `HTML`, `CSS`, `JS`, & `SVG`. No Third-Party frameworks or libraries are Required. All we need is a static web server like `Nginx`. I started this project in 2011 and moved to OpenSpeedTest.com dedicated Project/Domain Name in 2013.
   
 
 [![Download OpenSpeedTest-Server V2.1](https://github.com/openspeedtest/v2-Test/raw/main/images/10G-S.gif)](https://go.openspeedtest.com/Server  "Download OpenSpeedTest-Server V2.1")
@@ -18,7 +18,7 @@ SpeedTest by OpenSpeedTest™ is a Free and Open-Source HTML5 Network Performanc
 
   
 
-OpenSpeedTest contains Only "STATIC" Files like HTML,CSS & JS.
+OpenSpeedTest contains Only `STATIC` Files like `HTML`,`CSS` & `JS`.
 
 So you don't need to worry about Security Updates or Hidden Exploits that may compromise your secure environments.
 
@@ -28,7 +28,7 @@ So you don't need to worry about Security Updates or Hidden Exploits that may co
 
   
 
-OpenSpeedTest is written in Pure JavaScript. No Third-Party frameworks or libraries were used. SpeedTest script file size is under 8kB gzip. The unexpected side effect of using Pure JavaScript is High Performance.
+OpenSpeedTest is written in Vanilla JavaScript. No Third-Party frameworks or libraries were used. SpeedTest script file size is under 8kB gzip. The unexpected side effect of using Vanilla JavaScript is High Performance.
 
   
 
@@ -52,23 +52,23 @@ OpenSpeedTest User interface is written in SVG.
 
 ###  Server Requirements :
 
-Nginx, Apache, IIS, Express, or Any Web server that supports HTTP/1.1.
+`Nginx`, `Apache`, `IIS`, `Express`, or Any Web server that supports `HTTP/1.1`.
 
-- Accept, GET, POST, HEAD & OPTIONS, Response 200 OK.
+- Accept, `GET`, `POST`, `HEAD` & `OPTIONS`, Response `200 OK`.
 
-- Accept, POST to Static Files, Response 200 OK.
+- Accept, `POST` to Static Files, Response `200 OK`.
 
-- client_max_body_size, 35 Megabytes or more.
+- `client_max_body_size`, 35 Megabytes or more.
 
-- Timeout greater than 60 seconds.
+- Timeout greater than `60 seconds`.
 
-- Disable Access logs for Increasing server performance.
+- Disable `Access logs` for Increasing server performance.
 
-- Improve Time to First Byte (TTFB)
+- Improve `Time to First Byte` (TTFB)
 
 - Warning! If you run it behind **[a reverse proxy](https://github.com/openspeedtest/Speed-Test/issues/4#issuecomment-1229157193)** you should increase post body content length to 35 Megabytes or more.
-
-- **[Follow our Nginx Config.](https://github.com/openspeedtest/Nginx-Configuration)**
+- Supports `HTTP2` & `HTTP3`. Wait for POST-BODY and Discard the DATA for UPLOAD. 
+- **[You Should Follow our Nginx Config.](https://github.com/openspeedtest/Nginx-Configuration)**
 
   
 
