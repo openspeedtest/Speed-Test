@@ -171,7 +171,7 @@ var saveDataURL = "//yourDatabase.Server.com:4500/save?data=";
 
 ````
 
-4. Add multiple servers (Choose one with least latency automatically)
+4. Add multiple servers. The app will choose one with the least latency automatically.
 
   
 
