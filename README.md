@@ -88,17 +88,17 @@ OpenSpeedTest-Server is available for  Windows, Mac, Linux, Android, iOS & Docke
 
   
 
-To enable the stress test. Pass 'Stress' or 'S' keyword as a URL parameter.
+To enable the stress test. Pass `Stress` or `S` keyword as a URL parameter.
 
   
 
 ````
 
-http://192.168.1.5?stress=low
+`http://192.168.1.5?Stress=Low`
 
 ````
 
-After the 'STRESS' or 'S' keyword, you can specify the number of seconds you need to run the StressTest in seconds, or preset values such as "low", "medium", "high", "veryhigh", "extreme", "day", and "year". Will run a speed test for 300,600,900,1800,3600,86400,31557600 seconds, respectively. Also, you can feed the first letter of each parameter and its values.
+After the `STRESS` or `S` keyword, you can specify the number of seconds you need to run the StressTest in seconds, or preset values such as `Low`, `Medium`, `High`, `VeryHigh`, `Extreme`, `Day`, and `Year`. Will run a speed test for `300`,`600`,`900`,`1800`,`3600`,`86400`,`31557600` seconds, respectively. Also, you can feed the first letter of each parameter and its values.
   
 
 ````
