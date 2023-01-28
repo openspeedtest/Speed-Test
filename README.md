@@ -289,10 +289,12 @@ More samples = more accurate representation. `Ping = 500` will send `501` reques
 Take a look at index.html, you can set a custom ping sample size, threads, upload data size etc.
 
 ## Self-hosted (On-Premise) / (Docker Image/Source Code)
-### For Headless large-scale deployments.
+### For Headless large-scale For headless deployments.
 You have two options here. If you need a custom deployment, use our source code along with a web server of your choice. I prefer Nginx, and you can find my [Nginx Configuration](https://github.com/openspeedtest/Nginx-Configuration) here. Or you can use our docker image. You can deploy it on your LAN/WAN with or without an active internet connection.
 
 **This is docker implementation using nginxinc/nginx-unprivileged:stable-alpine. uses significantly fewer resources.**
+
+- NGINX Docker image that runs NGINX as a non root, unprivileged user.
  
  ###  Docker install instructions:
 
