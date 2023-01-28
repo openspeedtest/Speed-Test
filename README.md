@@ -305,6 +305,18 @@ You have two options here. If you need a custom deployment, use our source code 
 sudo docker run --restart=unless-stopped --name openspeedtest -d -p 3000:3000 -p 3001:3001 openspeedtest/latest
 
 ````
+#### Or use docker-compose.yml 
+````
+version: '3.3'
+services:
+    speedtest:
+        restart: unless-stopped
+        container_name: openspeedtest
+        ports:
+            - '3000:3000'
+            - '3001:3001'
+        image: openspeedtest/latest
+````
 - Warning! If you run it behind **[a reverse proxy](https://github.com/openspeedtest/Speed-Test/issues/4#issuecomment-1229157193)** you should increase post body content length to 35 Megabytes or more.
 
 - **[Follow our Nginx Config.](https://github.com/openspeedtest/Nginx-Configuration)**
@@ -347,8 +359,6 @@ I am adding a folder with nginx.crt and nginx.key from my desktop by using the f
 sudo docker run -v /Users/vishnu/Desktop/docker/:/etc/ssl/ --restart=unless-stopped --name openspeedtest -d -p 3000:3000 -p 3001:3001 openspeedtest/latest
 
 ````
-
-  
 
 Docker images run better on Linux Platforms, including your NAS. But if you install docker on macOS or Windows, you may see poor performance. I asked this on Docker forums, and they told me macOS and Windows support is for Development purposes only. For Production, you need to use any Linux Platform.
 
