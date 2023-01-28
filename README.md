@@ -311,14 +311,14 @@ sudo docker run --restart=unless-stopped --name openspeedtest -d -p 3000:3000 -p
 
 Now open your browser and direct it to:
 
-A: For **HTTP** use: [http://YOUR-SERVER-IP:3000](http://your-nas-ip:3000/)
+A: For **HTTP** use: `http://YOUR-SERVER-IP:3000`
 
-B: For **HTTPS** use: [https://YOUR-SERVER-IP:3001](https://your-nas-ip:3001/)
+B: For **HTTPS** use: `https://YOUR-SERVER-IP:3001`
 
 #### Container-Port for http is 3000
-If you need to run this image on a different port for http, Eg: change to 5000 = -p 5000:3000
+If you need to run this image on a different port for `HTTP`, Eg: change to `80` = `-p 80:3000`
 #### Container-Port for https is 3001
-If you need to run this image on a different port for https, Eg: change to 6000 =  -p 6000:3001
+If you need to run this image on a different port for `HTTPS`, Eg: change to `443` =  `-p 443:3001`
 
 ###  How to use your own SSL Certificate?
 
