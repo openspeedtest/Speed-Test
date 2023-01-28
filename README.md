@@ -109,13 +109,13 @@ http://192.168.1.5?S=L
 
 `S=L` is the same as passing `Stress=low`
 
-Or you can specify the number of seconds eg:5000 directly without any preset keywords.
+Or you can specify the number of seconds eg:`5000` directly without any preset keywords.
 
   
 
 ````
 
-http://192.168.1.5?stress=5000
+http://192.168.1.5?Stress=5000
 
 ````
 
@@ -143,7 +143,7 @@ http://192.168.1.5?Run=10 or http://192.168.1.5?R=10
 
   
 
-You can pass multiple keywords, and it's not case-sensitive.
+You can pass multiple keywords, and it's not `Case-Sensitive`.
 
   
 
@@ -153,7 +153,7 @@ http://192.168.1.5?Run&Stress=300 OR http://192.168.1.5?R&S=300
 
 ````
 
-This will start a speed test immediately and run for 300 seconds in each direction. That is 300 seconds for download and 300 seconds for upload.
+This will start a speed test immediately and run for `300 seconds` in each direction. That is 300 seconds for download and `300 seconds` for upload.
 
   
 
@@ -269,9 +269,9 @@ http://192.168.1.5?Out=7000 OR http://192.168.1.5?O=7000
 
 If Server not responded within 5 Seconds for any requests we send ('pingSamples' times)
 
-We will show Network Error, You can change the limit here.
+We will show `Network Error`, You can change the limit here.
 
-In milliseconds, if you need to set 6 seconds. Change the value to 6000.
+In milliseconds, if you need to set `6 seconds`. Change the value to `6000`.
 
   
 
