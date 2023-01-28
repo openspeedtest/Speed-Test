@@ -408,27 +408,7 @@ Many useful browser extensions are out there that we all know and love. But some
 
 **No client-side software or plugin is required. You can run a network speed test from any device with a web browser that is IE10 or new.**
 
-
-©Copyright 2013-2023 by OpenSpeedTest™ All Rights Reserved.
-
- 
-Read full license terms @ http://go.openspeedtest.com/License
-
-  
-
-Like this Project? Please **Donate NOW & Keep us Alive** -> https://go.openspeedtest.com/Donate
-
-  
-
-**Official Website :** https://OpenSpeedTest.COM | **Email**: support@openspeedtest.com
-
-  
-
-**Developed by : Vishnu** | https://Vishnu.Pro | **Email** : me@vishnu.pro
-
-  
-
-If you have any Questions, ideas or Comments Please Send it via -> https://go.openspeedtest.com/SendMessage
+- Like this Project? Please **Donate NOW & Keep us Alive** -> https://go.openspeedtest.com/Donate
 
 MIT License
 
