@@ -8,7 +8,7 @@ SpeedTest by OpenSpeedTest™ is a Free and Open-Source HTML5 Network Performanc
 [![Download OpenSpeedTest-Server V2.1](https://github.com/openspeedtest/v2-Test/raw/main/images/10G-S.gif)](https://go.openspeedtest.com/Server  "Download OpenSpeedTest-Server V2.1")
  <a target="_blank"  href="https://go.openspeedtest.com/MicrosoftStore"><img src="https://github.com/openspeedtest/v2-Test/raw/main/images/Microsoft-Store-250x100.png"  alt="Download from the Microsoft Store"  width="200"  height="80"  style=""></a> <a target="_blank"  href="https://go.openspeedtest.com/MacAppStore"><img src="https://github.com/openspeedtest/v2-Test/raw/main/images/Mac-App-Store-250x100.png"  alt="Download from the Mac App Store"  width="200"  height="80"  style=""></a> <a target="_blank"  href="http://go.openspeedtest.com/iOS"><img src="https://github.com/openspeedtest/v2-Test/raw/main/images/App-Store-250x100.png"  alt="Download from the App Store"  width="200"  height="80"  style=""></a> <a target="_blank"  href="https://go.openspeedtest.com/Android"><img src="https://github.com/openspeedtest/v2-Test/raw/main/images/GooglePlay-250x100.png"  alt="Download from the Google Play Store" width="200"  height="80"  style=""></a> <a target="_blank"  href="https://go.openspeedtest.com/snapcraft"><img src="https://github.com/openspeedtest/v2-Test/raw/main/images/SnapStore-250x100.png"  alt="Download from the Snap Store"  width="200"  height="80"  style=""></a> <a target="_blank"  href="http://go.openspeedtest.com/docker"><img src="https://github.com/openspeedtest/v2-Test/raw/main/images/docker-250x100.png"  alt="Download from the Docker Hub"  width="200"  height="80"  style=""></a> <a target="_blank"  href="http://go.openspeedtest.com/helm"><img src="https://github.com/openspeedtest/v2-Test/raw/main/images/Helm-Charts-250x100.png"  alt="Download from the Helm Store"  width="200"  height="80"  style=""></a> <a target="_blank"  href="http://go.openspeedtest.com/Source"><img src="https://github.com/openspeedtest/v2-Test/raw/main/images/GitHub-250x100.png"  alt="Download from GitHub"  width="200"  height="80"  style=""></a>
 
-**No client-side software or plugin is required. You can run a network speed test from any device with a [web browser that is IE10 or new.](https://www.youtube.com/watch?v=cGxjtjljGEc&list=PLt-deStxFJOMEAs2O1lJhscMNzcg9E3Po&index=5)**
+**No client-side software or plugin is required. You can run a network speed test from any device with a [Web Browser that is IE10 or new.](https://www.youtube.com/watch?v=9f-OM_WQ7Bw&list=PLt-deStxFJOMEAs2O1lJhscMNzcg9E3Po&index=1)**
 
 ##  Why OpenSpeedTest
 
@@ -406,7 +406,7 @@ Many useful browser extensions are out there that we all know and love. But some
 
   
 
-**No client-side software or plugin is required. You can run a network speed test from any device with a [web browser that is IE10 or new.](https://www.youtube.com/watch?v=cGxjtjljGEc&list=PLt-deStxFJOMEAs2O1lJhscMNzcg9E3Po&index=5)**
+**No client-side software or plugin is required. You can run a network speed test from any device with a [Web Browser that is IE10 or new.](https://www.youtube.com/watch?v=9f-OM_WQ7Bw&list=PLt-deStxFJOMEAs2O1lJhscMNzcg9E3Po&index=1)**
 
 - Like this Project? Please **Donate NOW & Keep us Alive** -> https://go.openspeedtest.com/Donate
 
