@@ -10,6 +10,9 @@ SpeedTest by OpenSpeedTest™ is a Free and Open-Source HTML5 Network Performanc
 
 **No client-side software or plugin is required. You can run a network speed test from any device with a [Web Browser that is IE10 or new.](https://www.youtube.com/watch?v=9f-OM_WQ7Bw&list=PLt-deStxFJOMEAs2O1lJhscMNzcg9E3Po&index=1)**
 
+ <a target="_blank"  href="https://www.youtube.com/embed/Lq9dpMCM6kQ?autoplay=1"><img src="https://open.cachefly.net/assets/images/videos/Roberto-Jorge-Tech-yt.jpg"  alt="Video Tutorial by Roberto Jorge Tech"  width="48%" style=""></a> 
+ <a target="_blank"  href="https://www.youtube.com/embed/9NIHAmVkomk?autoplay=1"><img src="https://open.cachefly.net/assets/images/videos/lanpad-yt.jpg"  alt="Video Tutorial by LanPad"  width="48%" style=""></a> 
+
 ##  Why OpenSpeedTest
 
   
