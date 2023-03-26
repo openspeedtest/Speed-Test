@@ -70,7 +70,8 @@ OpenSpeedTest User interface is written in SVG.
 - Improve `Time to First Byte` (TTFB)
 
 - Warning! If you run it behind a **[Reverse Proxy](https://github.com/openspeedtest/Speed-Test/issues/4#issuecomment-1229157193)**, you should increase the `post-body content length` to 35 megabytes.
-- Supports `HTTP2` & `HTTP3`. Wait for POST-BODY and Discard the DATA for UPLOAD. 
+- Supports `HTTP2` & `HTTP3`.
+- `HTTP1.1` is recommended for achieving maximum performance.
 - **[You Should Follow our Nginx Config.](https://github.com/openspeedtest/Nginx-Configuration)**
 
   
