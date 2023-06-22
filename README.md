@@ -336,10 +336,51 @@ If you need to run this image on a different port for `HTTP`, Eg: change to `80`
 #### Container-Port for https is 3001
 If you need to run this image on a different port for `HTTPS`, Eg: change to `443` =  `-p 443:3001`
 
-###  How to use your own SSL Certificate?
+### Setup Free LetsEncrypt SSL with Automatic Certificate Renewal
+***Requirements***
+- PUBLIC IPV4 and/or IPV6 address.
+- A domain name that resolves to speed test server's IP address.
+- Email ID
 
-You can mount a folder with your own SSL certificate to this docker container by adding the following line to the above command.
+The following command will generate a Let's Encrypt certificate for your domain name and configure a cron job to automatically renew the certificate.
 
+````
+docker run -e ENABLE_LETSENCRYPT=True -e DOMAIN_NAME=speedtest.yourdomain.com -e USER_EMAIL=you@yourdomain.pro --restart=unless-stopped --name openspeedtest -d -p 80:3000 -p 443:3001 openspeedtest/latest
+````
+#### Or use docker-compose.yml 
+````
+version: '3.3'
+services:
+    speedtest:
+        environment:
+            - ENABLE_LETSENCRYPT=True
+            - DOMAIN_NAME=speedtest.yourdomain.com
+            - USER_EMAIL=you@yourdomain.pro
+        restart: unless-stopped
+        container_name: openspeedtest
+        ports:
+            - '80:3000'
+            - '443:3001'
+        image: openspeedtest/latest
+````
+
+###  How to Use Your Own Secure Sockets Layer (SSL) Certificate, Self-Signed or Paid?
+***Requirements***
+- Folder with your Certificate, Self-Signed or Paid.
+- Rename .cet file and .key file to `nginx.crt` & `nginx.key`
+
+  The folder needs to contain:
+
+- `nginx.crt`
+
+- `nginx.key`
+
+
+````
+sudo docker run --restart=unless-stopped --name openspeedtest -d -p 3000:3000 -p 3001:3001 openspeedtest/latest
+````
+
+To mount a folder with your own SSL certificate to this Docker container, append the following line to the above command:
   
 
 ````bash
@@ -347,21 +388,27 @@ You can mount a folder with your own SSL certificate to this docker container by
 -v /${PATH-TO-YOUR-OWN-SSL-CERTIFICATE}:/etc/ssl/
 
 ````
-
-The folder needs to contain:
-
-- `nginx.crt`
-
-- `nginx.key`
-
   
-
 I am adding a folder with nginx.crt and nginx.key from my desktop by using the following command.
 
 ````bash
 
 sudo docker run -v /Users/vishnu/Desktop/docker/:/etc/ssl/ --restart=unless-stopped --name openspeedtest -d -p 3000:3000 -p 3001:3001 openspeedtest/latest
 
+````
+#### Or use docker-compose.yml 
+````
+version: '3.3'
+services:
+    speedtest:
+        volumes:
+            - '/Users/vishnu/Desktop/docker/:/etc/ssl/'
+        restart: unless-stopped
+        container_name: openspeedtest
+        ports:
+            - '3000:3000'
+            - '3001:3001'
+        image: openspeedtest/latest
 ````
 
 Docker images run better on Linux Platforms, including your NAS. But if you install docker on macOS or Windows, you may see poor performance. I asked this on Docker forums, and they told me macOS and Windows support is for Development purposes only. For Production, you need to use any Linux Platform.
