@@ -737,20 +737,8 @@ window.onload = function() {
         }
       }
     }
-    var OpenSpeedTestRun = parseInt(getCommand.run);
-    var OpenSpeedTestRunR = parseInt(getCommand.r);
-    var OpenSpeedTestStart;
-    if (enableRun) {
-      if (typeof getCommand.run === "string" || typeof getCommand.r === "string") {
-        if (OpenSpeedTestRun > 0) {
-          OpenSpeedTestStart = OpenSpeedTestRun;
-        } else if (OpenSpeedTestRunR > 0) {
-          OpenSpeedTestStart = OpenSpeedTestRunR;
-        } else {
-          OpenSpeedTestStart = 0;
-        }
-      }
-    }
+    
+    var OpenSpeedTestStart = 0;
     if (OpenSpeedTestStart >= 0) {
       if (launch) {
         runTasks();
@@ -810,7 +798,7 @@ window.onload = function() {
     function ShowIP() {
       if (requestIP) {
         Show.YourIP.el.textContent = "Please wait..";
-        ServerConnect(7);
+        ServerConnect(6);
         requestIP = false;
       }
       Show.ip();
@@ -858,8 +846,8 @@ window.onload = function() {
         }
       }
     }
-    var osttm = "\u2122";
-    var myname = "OpenSpeedTest";
+    var osttm = "";
+    var myname = "WiFi-Check";
     var com = ".com";
     var ost = myname + osttm;
     function hiEnter(e) {
@@ -1007,7 +995,7 @@ window.onload = function() {
         if (Status === "SendR") {
           Show.showStatus("All done");
           var dummyElement = document.createElement("div");
-          dummyElement.innerHTML = '<a xlink:href="https://openspeedtest.com?ref=Self-Hosted-Outro&run=5" style="cursor: pointer" target="_blank"></a>';
+          dummyElement.innerHTML = '<a xlink:href="https://wifi-check.com" style="cursor: pointer" target="_blank"></a>';
           var htmlAnchorElement = dummyElement.querySelector("a");
           Show.oDoLiveSpeed.el.textContent = ost;
           var circleSVG = document.getElementById("oDoLiveSpeed");
