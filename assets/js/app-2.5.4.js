@@ -1002,7 +1002,7 @@ window.onload = function() {
           htmlAnchorElement.innerHTML = circleSVG.innerHTML;
           circleSVG.innerHTML = dummyElement.innerHTML;
           if (location.hostname != myname.toLowerCase() + com) {
-            saveTestData = "https://" + myname.toLowerCase() + com + "/results/show.php?" + "&d=" + downloadSpeed.toFixed(3) + "&u=" + uploadSpeed.toFixed(3) + "&p=" + pingEstimate + "&j=" + jitterEstimate + "&dd=" + (dataUsedfordl / 1048576).toFixed(3) + "&ud=" + (dataUsedforul / 1048576).toFixed(3) + "&ua=" + userAgentString;
+            saveTestData = "https://" + myname.toLowerCase() + com + "";
             saveTestData = encodeURI(saveTestData);
             var circleSVG2 = document.getElementById("resultsData");
             circleSVG2.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", saveTestData);
