@@ -410,6 +410,26 @@ services:
             - '3001:3001'
         image: openspeedtest/latest
 ````
+## Advanced Configuration Options 
+
+- Container Port Configuration
+  
+To enable port changes, set the `CHANGE_CONTAINER_PORTS` environment variable to `"True"` and provide appropriate values for the following variables.
+
+`CHANGE_CONTAINER_PORTS=True`
+
+`HTTP_PORT=3000`
+
+`HTTPS_PORT=3001`
+
+- Set User
+  
+`SET_USER=101`
+
+- Only Allow `CORS Request` from listed domains. 
+
+`ALLOW_ONLY=domain1.com;domain2.com;domain3.com`
+
 
 Docker images run better on Linux Platforms, including your NAS. But if you install docker on macOS or Windows, you may see poor performance. I asked this on Docker forums, and they told me macOS and Windows support is for Development purposes only. For Production, you need to use any Linux Platform.
 
