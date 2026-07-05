@@ -197,7 +197,7 @@ window.onload = function() {
       this.graphMob1.el.style.display = "none";
       this.graphMob2.el.style.display = "block";
     }
-    if (!isNaN(speed)) {
+    if (!isNaN(speed) && isFinite(speed)) {
       this.values.push(speed);
     } else {
       this.values.push("");
@@ -229,6 +229,9 @@ window.onload = function() {
         var points = "0," + Self.height + " ";
         for (x = 0; x < Self.values.length; x++) {
           var perc = Self.values[x] / Self.maxValue;
+          if (!isFinite(perc)) {
+            perc = 0;
+          }
           var steps = 130 / (Self.values.length - 1);
           var point = (steps * x).toFixed(2) + "," + (Self.height - Self.height * perc).toFixed(2) + " ";
           points += point;
