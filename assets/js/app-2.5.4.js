@@ -8,11 +8,16 @@
 */ 
 window.onload = function() {
   var appSVG = document.getElementById("OpenSpeedTest-UI");
-  appSVG.parentNode.replaceChild(appSVG.contentDocument.documentElement, appSVG);
+  var appRoot = appSVG.contentDocument.documentElement;
+  appSVG.parentNode.replaceChild(appRoot, appSVG);
+  if (window.OpenSpeedTestI18n) {
+    window.OpenSpeedTestI18n.translateSvg(appRoot);
+  }
   ostOnload();
   OpenSpeedTest.Start();
 };
 (function(OpenSpeedTest) {
+  var I18n = window.OpenSpeedTestI18n;
   var Status;
   var ProG;
   var Callback = function(callback) {
@@ -809,7 +814,7 @@ window.onload = function() {
     var requestIP = false;
     function ShowIP() {
       if (requestIP) {
-        Show.YourIP.el.textContent = "Please wait..";
+        Show.YourIP.el.textContent = I18n.t("status.pleaseWait");
         ServerConnect(7);
         requestIP = false;
       }
@@ -825,7 +830,7 @@ window.onload = function() {
         Show.userInterface();
         init = false;
         var AutoTme = Math.ceil(Math.abs(OpenSpeedTestStart));
-        Show.showStatus("Automatic Test Starts in ...");
+        Show.showStatus(I18n.t("status.automaticStart"));
         var autoTest = setInterval(countDownF, 1000);
       }
       function countDownF() {
@@ -843,7 +848,7 @@ window.onload = function() {
       }
       if (openSpeedTestServerList === "fetch" && launch === true) {
         launch = false;
-        Show.showStatus("Fetching Server Info..");
+        Show.showStatus(I18n.t("status.fetchingServer"));
         ServerConnect(6);
       }
       if (launch === true) {
@@ -905,10 +910,10 @@ window.onload = function() {
         }
         if (Status === "Ping") {
           Status = "busy";
-          Show.showStatus("Milliseconds");
+          Show.showStatus(I18n.t("status.milliseconds"));
         }
         if (Status === "Download") {
-          Show.showStatus("Initializing..");
+          Show.showStatus(I18n.t("status.initializing"));
           Get.reset();
           reSett();
           Show.reset();
@@ -920,7 +925,7 @@ window.onload = function() {
           Show.Symbol(0);
           if (Startit == 0) {
             Startit = 1;
-            Show.showStatus("Testing download speed..");
+            Show.showStatus(I18n.t("status.testingDownload"));
             var extraTime = (window.performance.now() - downloadTime) / 1000;
             dReset = extraTime;
             Show.progress(1, dlDuration + 2.5);
@@ -928,7 +933,7 @@ window.onload = function() {
           }
           downloadTimeing = (window.performance.now() - downloadTime) / 1000;
           reportCurrentSpeed("dl");
-          Show.showStatus("Mbps download");
+          Show.showStatus(I18n.t("status.mbpsDownload"));
           Show.mainGaugeProgress(currentSpeed);
           Show.LiveSpeed(currentSpeed);
           Show.Graph(currentSpeed, 0);
@@ -936,7 +941,7 @@ window.onload = function() {
           if (downloadTimeing >= dlDuration && ProG == "done") {
             if (SelectTest) {
               Show.GaugeProgresstoZero(currentSpeed, "SendR");
-              Show.showStatus("All done");
+              Show.showStatus(I18n.t("status.done"));
               Show.Symbol(2);
             } else {
               Show.GaugeProgresstoZero(currentSpeed, "Upload");
@@ -953,7 +958,7 @@ window.onload = function() {
           if (stop === 1) {
             Show.Symbol(1);
             Status = "initup";
-            Show.showStatus("Initializing..");
+            Show.showStatus(I18n.t("status.initializing"));
             Show.LiveSpeed("...", "speedToZero");
             SendData = Get.uRandom(ulDataSize, readyToUP);
             if (SelectTest) {
@@ -964,7 +969,7 @@ window.onload = function() {
         if (Status === "Uploading") {
           if (Startit == 1) {
             Startit = 2;
-            Show.showStatus("Testing upload speed..");
+            Show.showStatus(I18n.t("status.testingUpload"));
             currentSpeed = 0;
             Get.reset();
             Show.reset();
@@ -973,7 +978,7 @@ window.onload = function() {
             Show.progress(false, ulDuration + 2.5);
             ulDuration += extraUTime;
           }
-          Show.showStatus("Mbps upload");
+          Show.showStatus(I18n.t("status.mbpsUpload"));
           uploadTimeing = (window.performance.now() - uploadTime) / 1000;
           reportCurrentSpeed("up");
           Show.mainGaugeProgress(currentSpeed);
@@ -985,27 +990,27 @@ window.onload = function() {
             Show.uploadResult(uploadSpeed);
             Show.GaugeProgresstoZero(currentSpeed, "SendR");
             SendData = undefined;
-            Show.showStatus("All done");
+            Show.showStatus(I18n.t("status.done"));
             Show.Symbol(2);
             Status = "busy";
             stop = 0;
           }
         }
         if (Status === "Error") {
-          Show.showStatus("Check your network connection status.");
+          Show.showStatus(I18n.t("status.checkConnection"));
           Show.ConnectionError();
           Status = "busy";
           clearInterval(Engine);
           var dummyElement = document.createElement("div");
           dummyElement.innerHTML = '<a xlink:href="https://openspeedtest.com/FAQ.php?ref=NetworkError" style="cursor: pointer" target="_blank"></a>';
           var htmlAnchorElement = dummyElement.querySelector("a");
-          Show.oDoLiveSpeed.el.textContent = "Network Error";
+          Show.oDoLiveSpeed.el.textContent = I18n.t("status.networkError");
           var circleSVG = document.getElementById("oDoLiveSpeed");
           htmlAnchorElement.innerHTML = circleSVG.innerHTML;
           circleSVG.innerHTML = dummyElement.innerHTML;
         }
         if (Status === "SendR") {
-          Show.showStatus("All done");
+          Show.showStatus(I18n.t("status.done"));
           var dummyElement = document.createElement("div");
           dummyElement.innerHTML = '<a xlink:href="https://openspeedtest.com?ref=Self-Hosted-Outro&run=5" style="cursor: pointer" target="_blank"></a>';
           var htmlAnchorElement = dummyElement.querySelector("a");

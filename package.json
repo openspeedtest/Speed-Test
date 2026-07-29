@@ -1,0 +1,10 @@
+{
+  "name": "openspeedtest-i18n",
+  "private": true,
+  "version": "2.5.4-i18n",
+  "description": "Static checks for the OpenSpeedTest internationalization layer",
+  "scripts": {
+    "test": "node tests/i18n.test.js && node tests/check-i18n.js"
+  },
+  "license": "MIT"
+}

@@ -1,6 +1,11 @@
 body {
   background-color: #181818;
 }
+.language-switcher {
+  color: #f5f5f5;
+  background: rgba(24, 24, 24, 0.92);
+  border-color: rgba(255, 255, 255, 0.2);
+}
 #ipDesk {
   fill: aliceblue;
 }

@@ -138,12 +138,12 @@
 	</symbol>
 	<symbol id="downloadRc1" viewBox="0 0 66.93 13.85">
 		<g>
-			<text transform="translate(0 10.52)" class="rtext">DOWNLOAD</text>
+			<text transform="translate(0 10.52)" class="rtext" data-i18n="label.download">DOWNLOAD</text>
 		</g>
 	</symbol>
 	<symbol id="uploadRc2" viewBox="0 0 46.73 13.85">
 		<g>
-			<text transform="translate(0 10.52)" class="rtext">UPLOAD</text>
+			<text transform="translate(0 10.52)" class="rtext" data-i18n="label.upload">UPLOAD</text>
 		</g>
 	</symbol>
 	<symbol id="pingSymbol" viewBox="0 0 14.28 14.28">
@@ -155,27 +155,27 @@
 	</symbol>
 	<symbol id="pingRc3" viewBox="0 0 28.43 13.85">
 		<g>
-			<text transform="translate(0 10.52)" class="rtext">PING</text>
+			<text transform="translate(0 10.52)" class="rtext" data-i18n="label.ping">PING</text>
 		</g>
 	</symbol>
 	<symbol id="jitterRc3" viewBox="0 0 39.95 13.85">
-		<text class="rtext" transform="translate(0 9.64)">JITTER</text>
+		<text class="rtext" transform="translate(0 9.64)" data-i18n="label.jitter">JITTER</text>
 	</symbol>
 	<symbol id="downResultC1" viewBox="0 0 53.35 39.8">
 		<text id="downResult" transform="translate(0 20.07)" class="rtextnum">---</text>
-		<text x="0" y="35" class="rtextmbms">Mbps</text>
+		<text x="0" y="35" class="rtextmbms" data-i18n="unit.mbps">Mbps</text>
 	</symbol>
 	<symbol id="upResultC2" viewBox="0 0 53.35 39.8">
 		<text id="upRestxt" transform="translate(0 20.07)" class="rtextnum">---</text>
-		<text x="0" y="36.09" class="rtextmbms">Mbps</text>
+		<text x="0" y="36.09" class="rtextmbms" data-i18n="unit.mbps">Mbps</text>
 	</symbol>
 	<symbol id="pingResultC3" viewBox="0 0 40.01 39.79">
 		<text transform="translate(0 20.07)" id="pingResult" class="rtextnum">--</text>
-		<text x="0" y="35" class="rtextmbms">ms</text>
+		<text x="0" y="35" class="rtextmbms" data-i18n="unit.ms">ms</text>
 	</symbol>
 	<symbol id="jitterResultC3" viewBox="0 0 21.99 39.79">
 		<text id="jitterDesk" transform="translate(2.33 20.07)" class="rtextnum">--</text>
-		<text x="2" y="35" xml:space="preserve" class="rtextmbms">ms</text>
+		<text x="2" y="35" xml:space="preserve" class="rtextmbms" data-i18n="unit.ms">ms</text>
 	</symbol>
 	<symbol style="fill: url(#gradient)" id="graphc1" viewBox="0 0 200 100">
 		<polygon
@@ -189,9 +189,9 @@
 	</symbol>
 	<symbol id="jitterMob" viewBox="0 0 58.1 35.77">
 		<text id="pingMobres" transform="translate(11.07 18.05)" class="rtextnum">--</text>
-		<text x="-8" y="33.46" class="rtextmbms">Jitter</text>
+		<text x="-8" y="33.46" class="rtextmbms" data-i18n="label.jitter">Jitter</text>
 		<text id="JitterResultMon" x="17" y="33.46" class="jitter-Mob">--</text>
-		<text id="JitterResultms" x="36" y="33.46" class="rtextmbms">ms</text>
+		<text id="JitterResultms" x="36" y="33.46" class="rtextmbms" data-i18n="unit.ms">ms</text>
 	</symbol>
 	<symbol id="settings" viewBox="0 0 100 125">
 		<rect fill="transparent" x="0" y="25" width="100" height="50" />
@@ -203,7 +203,7 @@
 	</symbol>
 	<symbol id="playButton" style="fill: #eaeaea" viewBox="0 0 191.255 191.255">
 		<rect width="180" height="90" rx="10" ry="10" class="startButton" />
-		<text class="buttonTxt" x="90" y="60">Start</text>
+		<text class="buttonTxt" x="90" y="60" data-i18n="action.start">Start</text>
 	</symbol>
 	<symbol id="introProgress" viewBox="0 0 409.31 10.48">
 		<line x1="5" y1="5" x2="405" y2="5"></line>
@@ -223,7 +223,7 @@
                  l-7.7,253.3C275.7,323.8,268.9,330.4,260.6,330.4z" />
 				</g>
 			</g>
-			<title>Network Error</title>
+			<title data-i18n="status.networkError">Network Error</title>
 		</a>
 	</symbol>
 	<symbol class="Your-IP" viewBox="0 0 300 299.12">
@@ -278,19 +278,19 @@
 		</symbol>
 		<a id="resultsData">
 			<svg class="Desktop" viewBox="0 0 586 346">
-				<title id="title1">HTML5 Network Performance Estimation Tool. by OpenSpeedTest™</title>
+				<title data-i18n="tooltip.app">HTML5 Network Performance Estimation Tool. by OpenSpeedTest™</title>
 				<g id="UI-Desk">
 					<use id="mainGaugebg-Desk" class="main-Gaugebg" xlink:href="#mainGaugebg" x="10.28" y="36.11" width="273.94" height="245.39"></use>
 					<use id="mainGaugeBlue-Desk" class="main-GaugeBlue" xlink:href="#mainGaugeBlue" x="10.28" y="36.11" width="273.94" height="245.39"></use>
 					<use id="mainGaugeWhite-Desk" class="main-GaugeWhite" xlink:href="#mainGaugeWhite" x="10.28" y="36.11" width="273.94" height="245.39"></use>
 					<use xlink:href="#resultCard" class="Cards" x="307.4" y="31" width="278.1" height="85.5">
-						<title id="title1">The download speed is how fast you can pull data from the server to you in the form of images, videos, text and more. Activities such as listening to music on Spotify, downloading large files or streaming videos on Netflix all require you to download data.</title>
+						<title data-i18n="tooltip.downloadDescription">The download speed is how fast you can pull data from the server to you in the form of images, videos, text and more. Activities such as listening to music on Spotify, downloading large files or streaming videos on Netflix all require you to download data.</title>
 					</use>
 					<use xlink:href="#resultCard" class="Cards" x="307.4" y="129.3" width="278.1" height="85.5">
-						<title id="title1">The upload speed is how fast you send data from you to others in the form of images, videos, text and more. Activities such as uploading to YouTube or Sending email, playing live games like PubG, Voice and Video calling a friend require fast upload speeds for you to send data to someone else’s server.</title>
+						<title data-i18n="tooltip.uploadDescription">The upload speed is how fast you send data from you to others in the form of images, videos, text and more. Activities such as uploading to YouTube or Sending email, playing live games like PubG, Voice and Video calling a friend require fast upload speeds for you to send data to someone else’s server.</title>
 					</use>
 					<use xlink:href="#resultCard" class="Cards" x="307.4" y="228.5" width="278.1" height="85.5">
-						<title id="title1">Ping "Round-trip time" is more or less well defined as the network delay from point A to B and back. This is the sum of all encoding, queueing, processing, decoding, and propagation delays in both directions. Essentially, it's the delay when A may be expecting an answer from B for a request that requires very little processing. A fast ping means a more responsive connection, especially in applications where timing is everything (like video games). Ping is measured in Milliseconds (ms). Jitter is simply the difference in Ping "Round-trip time" . In other words, jitter is measuring time difference in packet inter-arrival time. Jitter helps diagnose internet connection stability. The higher the jitter value, the worse the stability of the connection.</title>
+						<title data-i18n="tooltip.latencyDescription">Ping "Round-trip time" is more or less well defined as the network delay from point A to B and back. This is the sum of all encoding, queueing, processing, decoding, and propagation delays in both directions. Essentially, it's the delay when A may be expecting an answer from B for a request that requires very little processing. A fast ping means a more responsive connection, especially in applications where timing is everything (like video games). Ping is measured in Milliseconds (ms). Jitter is simply the difference in Ping "Round-trip time" . In other words, jitter is measuring time difference in packet inter-arrival time. Jitter helps diagnose internet connection stability. The higher the jitter value, the worse the stability of the connection.</title>
 					</use>
 					<use id="downSymbolDesk" xlink:href="#downSymbol" class="Desktop" x="133" y="99" width="32.21" height="41.62"></use>
 					<use id="upSymbolDesk" xlink:href="#upSymbol" class="Desktop" x="133" y="99" width="32.21" height="41.62"></use>
@@ -299,38 +299,38 @@
 					<use xlink:href="#progressBar" x="1" y="295" width="293.53" height="18.38"></use>
 					<use id="progressStatus-Desk" class="intro-Progress" xlink:href="#introProgress" x="29" y="295" width="234" height="21"></use>
 					<use xlink:href="#downloadRc1" x="335.05" y="50.28" width="67" height="16">
-						<title id="title1">Download speed is measured in megabits per second (Mbps).</title>
+						<title data-i18n="tooltip.downloadUnit">Download speed is measured in megabits per second (Mbps).</title>
 					</use>
 					<use xlink:href="#uploadRc2" x="345.33" y="145.2" width="47" height="16">
-						<title id="title1">Upload speed is measured in megabits per second (Mbps).</title>
+						<title data-i18n="tooltip.uploadUnit">Upload speed is measured in megabits per second (Mbps).</title>
 					</use>
 					<use xlink:href="#pingSymbol" x="351.4" y="243.8" width="14.3" height="14.4"></use>
 					<use xlink:href="#pingSymbol" x="481.3" y="244.6" width="14.33" height="14.4"></use>
 					<use xlink:href="#pingRc3" x="367.01" y="244.68" width="28" height="16">
-						<title id="title1">Ping is measured in Milliseconds (ms).</title>
+						<title data-i18n="tooltip.pingUnit">Ping is measured in Milliseconds (ms).</title>
 					</use>
 					<use xlink:href="#jitterRc3" x="495.61" y="246.3" width="39.95" height="13.85">
-						<title id="title1">Jitter is measured in Milliseconds (ms).</title>
+						<title data-i18n="tooltip.jitterUnit">Jitter is measured in Milliseconds (ms).</title>
 					</use>
 					<use xlink:href="#upSymbol" class="Symbol" x="329" y="146.5" width="11.8" height="13.9"></use>
 					<use xlink:href="#downSymbol" class="Symbol" x="318.7" y="51.9" width="11.8" height="13.8"></use>
 					<use xlink:href="#graphc2" x="427.84" y="134" width="200" height="135">
-						<title id="title1">Shows you real-time network traffic graph for Upload!</title>
+						<title data-i18n="tooltip.uploadGraph">Shows you real-time network traffic graph for Upload!</title>
 					</use>
 					<use xlink:href="#graphc1" x="427.84" y="35" width="200" height="135">
-						<title id="title1">Shows you real-time network traffic graph for Download!</title>
+						<title data-i18n="tooltip.downloadGraph">Shows you real-time network traffic graph for Download!</title>
 					</use>
 					<use xlink:href="#downResultC1" x="298" y="67.21" width="200" height="45.1">
-						<title id="title1">Your download speed!</title>
+						<title data-i18n="tooltip.downloadResult">Your download speed!</title>
 					</use>
 					<use xlink:href="#upResultC2" x="298" y="162.13" width="200" height="45.1">
-						<title id="title1">Your upload speed!</title>
+						<title data-i18n="tooltip.uploadResult">Your upload speed!</title>
 					</use>
 					<use xlink:href="#pingResultC3" x="303.73" y="261.55" width="200" height="45.1">
-						<title id="title1">Your ping!</title>
+						<title data-i18n="tooltip.pingResult">Your ping!</title>
 					</use>
 					<use xlink:href="#jitterResultC3" x="420.04" y="262.17" width="200" height="45.1">
-						<title id="title1">Your jitter!</title>
+						<title data-i18n="tooltip.jitterResult">Your jitter!</title>
 					</use>
 				</g>
 				<g id="intro-Desk">
@@ -340,64 +340,68 @@
 					<use xlink:href="#resultCard" class="Cards" x="307.4" y="228.5" width="278.1" height="85.5"></use>
 					<use xlink:href="#resultCard" class="Cards" x="307.4" y="129.3" width="278.1" height="85.5"></use>
 					<use xlink:href="#downloadRc1" x="335.05" y="50.28" width="67" height="16">
-						<title id="title1">Download speed is measured in megabits per second (Mbps).</title>
+						<title data-i18n="tooltip.downloadUnit">Download speed is measured in megabits per second (Mbps).</title>
 					</use>
 					<use xlink:href="#uploadRc2" x="345.33" y="145.2" width="47" height="16">
-						<title id="title1">Upload speed is measured in megabits per second (Mbps).</title>
+						<title data-i18n="tooltip.uploadUnit">Upload speed is measured in megabits per second (Mbps).</title>
 					</use>
 					<use xlink:href="#pingSymbol" x="351.4" y="243.8" width="14.3" height="14.4"></use>
 					<use xlink:href="#pingSymbol" x="481.3" y="244.6" width="14.33" height="14.4"></use>
 					<use xlink:href="#pingRc3" x="367.01" y="244.68" width="28" height="16">
-						<title id="title1">Ping is measured in Milliseconds (ms).</title>
+						<title data-i18n="tooltip.pingUnit">Ping is measured in Milliseconds (ms).</title>
 					</use>
 					<use xlink:href="#jitterRc3" x="495.61" y="246.3" width="39.95" height="13.85">
-						<title id="title1">Jitter is measured in Milliseconds (ms).</title>
+						<title data-i18n="tooltip.jitterUnit">Jitter is measured in Milliseconds (ms).</title>
 					</use>
 					<use xlink:href="#upSymbol" class="Symbol" x="329" y="146.5" width="11.8" height="13.9"></use>
 					<use xlink:href="#downSymbol" class="Symbol" x="318.7" y="51.9" width="11.8" height="13.8"></use>
 					<use xlink:href="#graphc2" x="427.84" y="134" width="200" height="135">
-						<title id="title1">Shows you real-time network traffic graph for Upload!</title>
+						<title data-i18n="tooltip.uploadGraph">Shows you real-time network traffic graph for Upload!</title>
 					</use>
 					<use xlink:href="#graphc1" x="427.84" y="35" width="200" height="135">
-						<title id="title1">Shows you real-time network traffic graph for Download!</title>
+						<title data-i18n="tooltip.downloadGraph">Shows you real-time network traffic graph for Download!</title>
 					</use>
 					<use xlink:href="#downResultC1" x="298" y="67.21" width="200" height="45.1">
-						<title id="title1">Your download speed!</title>
+						<title data-i18n="tooltip.downloadResult">Your download speed!</title>
 					</use>
 					<use xlink:href="#upResultC2" x="298" y="162.13" width="200" height="45.1">
-						<title id="title1">Your upload speed!</title>
+						<title data-i18n="tooltip.uploadResult">Your upload speed!</title>
 					</use>
 					<use xlink:href="#pingResultC3" x="303.73" y="261.55" width="200" height="45.1">
-						<title id="title1">Your ping!</title>
+						<title data-i18n="tooltip.pingResult">Your ping!</title>
 					</use>
 					<use xlink:href="#jitterResultC3" x="420.04" y="262.17" width="200" height="45.1">
-						<title id="title1">Your jitter!</title>
+						<title data-i18n="tooltip.jitterResult">Your jitter!</title>
 					</use>
-					<use id="nightmode"  class="darkmode" onclick="toggleSkin()" xlink:href="#dark" x="10" y="25" width="30" height="30"></use>
-					<use id="daymode"  class="darkmode" onclick="toggleSkin()" xlink:href="#light" x="10" y="25" width="30" height="30"></use>
+					<use id="nightmode" class="darkmode" onclick="toggleSkin()" xlink:href="#dark" x="10" y="25" width="30" height="30" data-i18n-aria-label="action.switchLight">
+						<title data-i18n="action.switchLight">Switch to light mode</title>
+					</use>
+					<use id="daymode" class="darkmode" onclick="toggleSkin()" xlink:href="#light" x="10" y="25" width="30" height="30" data-i18n-aria-label="action.switchDark">
+						<title data-i18n="action.switchDark">Switch to dark mode</title>
+					</use>
 					<use id="startButtonDesk" class="startButton" xlink:href="#playButton" x="125" y="300.6" width="50.2" height="50.2">
-						<title id="title1">Click here to Run a Speed Test! Or Press "Enter"</title>
+						<title data-i18n="tooltip.start">Click here to Run a Speed Test! Or Press "Enter"</title>
 					</use>
 					<use id="settingsDesk" class="Startsettings" xlink:href="#settings" x="100" y="260" width="100" height="40">
-						<title id="title1">Options</title>
+						<title data-i18n="tooltip.options">Options</title>
 					</use>
 					<use class="Desktop" id="ipDesk" xlink:href="#YourIP" x="7" y="70"></use>
 				</g>
 			</svg>
 			<svg class="Mobile" viewBox="0 0 295.9 363.3">
-				<title id="title1">HTML5 Network Performance Estimation Tool. by OpenSpeedTest™</title>
+				<title data-i18n="tooltip.app">HTML5 Network Performance Estimation Tool. by OpenSpeedTest™</title>
 				<g id="UI-Mob">
 					<use id="mainGaugebg-Mob" class="main-Gaugebg" xlink:href="#mainGaugebg" x="11.18" y="12" width="273.94" height="245.39"></use>
 					<use id="mainGaugeBlue-Mob" class="main-GaugeBlue" xlink:href="#mainGaugeBlue" x="11.18" y="12" width="273.94" height="245.39"></use>
 					<use id="mainGaugeWhite-Mob" class="main-GaugeWhite" xlink:href="#mainGaugeWhite" x="11.18" y="12" width="273.94" height="245.39"></use>
 					<use xlink:href="#resultCardMob" class="Cards" x="1" y="297.52" width="88.1" height="65.8">
-						<title id="title1">The download speed is how fast you can pull data from the server to you in the form of images, videos, text and more. Activities such as listening to music on Spotify, downloading large files or streaming videos on Netflix all require you to download data.</title>
+						<title data-i18n="tooltip.downloadDescription">The download speed is how fast you can pull data from the server to you in the form of images, videos, text and more. Activities such as listening to music on Spotify, downloading large files or streaming videos on Netflix all require you to download data.</title>
 					</use>
 					<use xlink:href="#resultCardMob" class="Cards" x="104.1" y="297.52" width="88.1" height="65.8">
-						<title id="title1">The upload speed is how fast you send data from you to others in the form of images, videos, text and more. Activities such as uploading to YouTube or Sending email, playing live games like PubG, Voice and Video calling a friend require fast upload speeds for you to send data to someone else’s server.</title>
+						<title data-i18n="tooltip.uploadDescription">The upload speed is how fast you send data from you to others in the form of images, videos, text and more. Activities such as uploading to YouTube or Sending email, playing live games like PubG, Voice and Video calling a friend require fast upload speeds for you to send data to someone else’s server.</title>
 					</use>
 					<use xlink:href="#resultCardMob" class="Cards" x="207.1" y="297.52" width="88.1" height="65.8">
-						<title id="title1">Ping "Round-trip time" is more or less well defined as the network delay from point A to B and back. This is the sum of all encoding, queueing, processing, decoding, and propagation delays in both directions. Essentially, it's the delay when A may be expecting an answer from B for a request that requires very little processing. A fast ping means a more responsive connection, especially in applications where timing is everything (like video games). Ping is measured in Milliseconds (ms). Jitter is simply the difference in Ping "Round-trip time" . In other words, jitter is measuring time difference in packet inter-arrival time. Jitter helps diagnose internet connection stability. The higher the jitter value, the worse the stability of the connection.</title>
+						<title data-i18n="tooltip.latencyDescription">Ping "Round-trip time" is more or less well defined as the network delay from point A to B and back. This is the sum of all encoding, queueing, processing, decoding, and propagation delays in both directions. Essentially, it's the delay when A may be expecting an answer from B for a request that requires very little processing. A fast ping means a more responsive connection, especially in applications where timing is everything (like video games). Ping is measured in Milliseconds (ms). Jitter is simply the difference in Ping "Round-trip time" . In other words, jitter is measuring time difference in packet inter-arrival time. Jitter helps diagnose internet connection stability. The higher the jitter value, the worse the stability of the connection.</title>
 					</use>
 					<use id="upSymbolMob" xlink:href="#upSymbol" class="Mobile" x="134" y="73" width="32.21" height="41.62"></use>
 					<use id="downSymbolMob" xlink:href="#downSymbol" class="Mobile" x="134" y="73" width="32.21" height="41.62"></use>
@@ -406,43 +410,47 @@
 					<use xlink:href="#progressBar" x="1.9" y="272.08" width="293.53" height="18.38"></use>
 					<use id="progressStatus-Mob" class="intro-Progress" xlink:href="#introProgress" x="29" y="272" width="234.5" height="21.5"></use>
 					<use xlink:href="#downloadRc1" x="22.36" y="301.63" width="60" height="15">
-						<title id="title1">Download speed is measured in megabits per second (Mbps).</title>
+						<title data-i18n="tooltip.downloadUnit">Download speed is measured in megabits per second (Mbps).</title>
 					</use>
 					<use xlink:href="#uploadRc2" x="237.51" y="301.64" width="42" height="15">
-						<title id="title1">Upload speed is measured in megabits per second (Mbps).</title>
+						<title data-i18n="tooltip.uploadUnit">Upload speed is measured in megabits per second (Mbps).</title>
 					</use>
 					<use xlink:href="#pingRc3" x="143.88" y="301.72" width="26" height="15">
-						<title id="title1">Ping is measured in Milliseconds (ms).</title>
+						<title data-i18n="tooltip.pingUnit">Ping is measured in Milliseconds (ms).</title>
 					</use>
 					<use xlink:href="#upSymbol" class="Symbol" x="221.8" y="303.42" width="12.3" height="10.6"></use>
 					<use xlink:href="#downSymbol" class="Symbol" x="7.7" y="303.42" width="10.6" height="12.4"></use>
 					<use xlink:href="#pingSymbol" x="126.8" y="303.32" width="12.5" height="12.4"></use>
 					<use id="graphMob1" xlink:href="#graphc1" x="83.1" y="160.45" width="200" height="135">
-						<title id="title1">Shows you real-time network traffic graph for Download!</title>
+						<title data-i18n="tooltip.downloadGraph">Shows you real-time network traffic graph for Download!</title>
 					</use>
 					<use id="graphMob2" xlink:href="#graphc2" x="83.1" y="160.45" width="200" height="135">
-						<title id="title1">Upload speed is measured in megabits per second (Mbps).</title>
+						<title data-i18n="tooltip.uploadGraph">Upload speed is measured in megabits per second (Mbps).</title>
 					</use>
 					<use xlink:href="#jitterMob" x="71.14" y="317.65" width="200" height="45.1">
-						<title id="title1">Your ping! and Jitter</title>
+						<title data-i18n="tooltip.pingJitterResult">Your ping! and Jitter</title>
 					</use>
 					<use xlink:href="#upResultC2" x="182" y="317.67" width="200" height="45.1">
-						<title id="title1">Your upload speed!</title>
+						<title data-i18n="tooltip.uploadResult">Your upload speed!</title>
 					</use>
 					<use xlink:href="#downResultC1" x="-25" y="317.64" width="200" height="45.1">
-						<title id="title1">Your download speed!</title>
+						<title data-i18n="tooltip.downloadResult">Your download speed!</title>
 					</use>
 				</g>
 				<g id="intro-Mob">
-					<use id="nightmode-Mob"  class="darkmode" onclick="toggleSkin()" xlink:href="#dark" x="10" y="25" width="30" height="30"></use>
-					<use id="daymode-Mob"  class="darkmode" onclick="toggleSkin()" xlink:href="#light" x="10" y="25" width="30" height="30"></use>
+					<use id="nightmode-Mob" class="darkmode" onclick="toggleSkin()" xlink:href="#dark" x="10" y="25" width="30" height="30" data-i18n-aria-label="action.switchLight">
+						<title data-i18n="action.switchLight">Switch to light mode</title>
+					</use>
+					<use id="daymode-Mob" class="darkmode" onclick="toggleSkin()" xlink:href="#light" x="10" y="25" width="30" height="30" data-i18n-aria-label="action.switchDark">
+						<title data-i18n="action.switchDark">Switch to dark mode</title>
+					</use>
 					<use id="logo-Desk" xlink:href="#logo" x="38" y="110" width="218.8" height="50.22"></use>
 					<use id="deskStartMob" class="deskStart" xlink:href="#mainGaugebg" x="11.18" y="12" width="273.94" height="245.39"></use>
 					<use id="startButtonMob" class="startButton" xlink:href="#playButton" x="125" y="280" width="50.2" height="50.2">
-						<title id="title1">Click here to run a speed!</title>
+						<title data-i18n="tooltip.start">Click here to run a speed!</title>
 					</use>
 					<use id="settingsMob" class="Startsettings" xlink:href="#settings" x="100" y="240" width="100" height="40">
-						<title id="title1">Options</title>
+						<title data-i18n="tooltip.options">Options</title>
 					</use>
 					<use class="Mobile" id="ipMob" xlink:href="#YourIP" x="11" y="49"></use>
 				</g>
