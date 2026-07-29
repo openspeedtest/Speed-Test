@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>SpeedTest by OpenSpeedTest™</title>
-  <meta name="description"
+  <title data-i18n="page.title">SpeedTest by OpenSpeedTest™</title>
+  <meta name="description" data-i18n-content="page.description"
     content="Test your network speed now. HTML5 Network Performance Estimation Tool. Self-Hosted SpeedTest by OpenSpeedTest™"/>
   <link href="assets/css/app.css" rel="stylesheet" type="text/css" />
   <script> window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches&&(document.head.innerHTML+='<link id="darkmode" rel="stylesheet" href="assets/css/darkmode.css" type="text/css"/>');function getCookieValue(b,a){return(a=document.cookie.match("(^|;)\\s*"+b+"\\s*=\\s*([^;]+)"))?a.pop():""}if("light"===getCookieValue("mode")){var darkStyle=document.getElementById("darkmode");darkStyle&&darkStyle.parentNode.removeChild(darkStyle)}; </script>
@@ -148,19 +148,35 @@ If you like to make any other modification to this application or need a custom 
 please get in touch with support@openspeedtest.com.
 -->
 
-  <div id="loading_app" class="spinner">
+  <div id="language-switcher" class="language-switcher">
+    <label for="language-select" data-i18n="language.label">Language</label>
+    <select id="language-select" data-i18n-aria-label="language.label">
+      <option value="en" data-i18n="language.en">English</option>
+      <option value="zh-CN" data-i18n="language.zhCN">简体中文</option>
+    </select>
+  </div>
+
+  <div id="loading_app" class="spinner" role="status" aria-live="polite">
     <div class="bounce1"></div>
     <div class="bounce2"></div>
     <div class="bounce3"></div>
+    <span class="sr-only" data-i18n="app.loading">Loading OpenSpeedTest</span>
   </div>
-  <object style="visibility:hidden" id="OpenSpeedTest-UI" data="assets/images/app.svg" type="image/svg+xml"></object>
+  <object style="visibility:hidden" id="OpenSpeedTest-UI" data="assets/images/app.svg"
+    type="image/svg+xml" title="OpenSpeedTest interface"
+    data-i18n-title="app.objectTitle"></object>
  
   <div class="Credits">
-    <a href="https://openspeedtest.com?ref=Self-Hosted&Run">SpeedTest by OpenSpeedTest™</a> is a Free and <a href="https://github.com/openspeedtest/Speed-Test">Open-Source HTML5 Network Speed Test</a> Software.
-    <p style="font-size: 12px;">&copy; Copyright 2013-2024 OpenSpeedTest™ All Rights Reserved.</p>
+    <a href="https://openspeedtest.com?ref=Self-Hosted&amp;Run">SpeedTest by OpenSpeedTest™</a><span
+      data-i18n="credits.is"> is free and </span><a
+      href="https://github.com/openspeedtest/Speed-Test"
+      data-i18n="credits.openSource">open-source HTML5 network speed test</a><span
+      data-i18n="credits.software"> software.</span>
+    <p style="font-size: 12px;" data-i18n="credits.copyright">&copy; Copyright 2013–2024 OpenSpeedTest™. All rights reserved.</p>
 </div>
   
-  <script src="assets/js/app-2.5.4.min.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/app-2.5.4.js"></script>
   <script src="assets/js/darkmode.js"></script>
 
 </body>

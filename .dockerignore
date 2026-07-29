@@ -1,0 +1,9 @@
+.git
+.github
+tests
+node_modules
+npm-debug.log
+Dockerfile
+I18N.md
+README.md
+hosted.html
